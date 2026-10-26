@@ -1,43 +1,36 @@
 <sigml>
-  <hns_sign gloss="nominate_number">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-      <hamfinger2/>
-      <hamextfingeru/>
-      <hampalmd/>
+  <hns_sign gloss="nominate">
+    <hamnosys_nonmanual/>
+     <hamnosys_manual>
+      <hamparbegin/>
+      <hamfist/>
+      <hamthumboutmod/>
+      <hamextfingero/>
+      <hampalml/>
+
+      <hamplus/>
+
+      <hamfinger2345/>
+      <hamextfingerr/>
+      <hampalmu/>
+
+      <hamparend/>
+
+
+      <hamparbegin/>
+	<hamfingerbase />
+	<hamindexfinger />
+	<hamplus />
+    	<hamfingerbase />
+	<hampinky />
+      <hamparend/>
+      <hamtouch/>
       <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="nominate_place">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-
-      <!-- Handshape per hand: fist + thumb up (dominant) placed onto a
-           flat, horizontal hand (passive, like a tabletop) -->
-      <hamparbegin/>
-        <hamfist/>
-        <hamthumboutmod/>
-        <hamextfingeru/>
-        <hampalmu/>
-        <hamplus/>
-        <hamflathand/>
-        <hamextfingerr/>
-        <hampalmu/>
-      <hamparend/>
-
-      <hamparbegin/>
-        <hamneutralspace/>
-        <hamplus/>
-        <hamneutralspace/>
-      <hamparend/>
-
-      <hamparbegin/>
-        <hamtouch/>
-        <hamplus/>
-        <hamnomotion/>
-      <hamparend/>
+        <hammoveu/>
+        <hamsmallmod/>
+        <hammoved/>
+        <hamsmallmod/>
+        <hamrepeatfromstart/>
 
     </hamnosys_manual>
   </hns_sign>
