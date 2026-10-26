@@ -1,47 +1,15 @@
-<sigml>
+ <sigml>
   <hns_sign gloss="don">
-    <hamnosys_nonmanual/>
+    <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
-      <hamsymmlr/>
+      <hamfinger2345/>
+      <hamthumbacrossmod/>
+      <hamextfingeru/>
+      <hampalmd/>
 
-      <!-- Handshape per hand: one hand pinches (holds the ring), the
-           other is the flat/open hand wearing it -->
-      <hamparbegin/>
-        <hampinch12open/>
-        <hamfingerstraightmod/>
-        <hamextfingerol/>
-        <hampalmd/>
-        <hamplus/>
-        <hamfinger2345/>
-        <hamthumboutmod/>
-        <hamextfingeror/>
-        <hampalmd/>
-      <hamparend/>
 
-      <!-- Location per hand -->
-      <hamparbegin/>
-        <hamshoulders/>
-        <hamlrat/>
-        <hamplus/>
-        <hamchest/>
-      <hamparend/>
+      <!-- Finger movement rather than whole-hand movement -->
 
-      <!-- Movement per hand -->
-      <hamparbegin/>
-        <hammoveil/>
-        <hamplus/>
-        <hamnomotion/>
-      <hamparend/>
-
-      <!-- Contact: index fingertip touches the base of the ring finger -->
-      <hamparbegin/>
-        <hamfingerbase/>
-        <hamringfinger/>
-        <hamplus/>
-        <hamfingertip/>
-        <hamindexfinger/>
-      <hamparend/>
-      <hamtouch/>
     </hamnosys_manual>
   </hns_sign>
 </sigml>

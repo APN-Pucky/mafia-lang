@@ -1,15 +1,15 @@
 <sigml>
-  <hns_sign gloss="shoot">
+  <hns_sign gloss="next">
     <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
       <hamfinger2/>
-      <hamthumboutmod/>
-      <hamfingerplay/>
       <hamextfingero/>
       <hampalmd/>
       <hamneutralspace/>
-      <hammoveo/>
-      <hamsmallmod/>
+      <hamsymmpar/>
+      <hamlrat/>
+      <hamstircw/>
+      <hamrepeatcontinueseveral/>
     </hamnosys_manual>
   </hns_sign>
 </sigml>

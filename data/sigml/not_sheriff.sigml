@@ -1,0 +1,34 @@
+<sigml>
+  <hns_sign gloss="crossed_forearms">
+    <hamnosys_manual>
+      <hamparbegin/>
+        <hampinch12open/>
+        <hamplus/>
+        <hampinch12open/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hamextfingeru/>
+        <hamplus/>
+        <hamextfingeru/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hampalml/>
+        <hamplus/>
+        <hampalmr/>
+      <hamparend/>
+
+
+      <!-- Location of each hand -->
+      <hamparbegin/>
+        <hamlrat/>
+        <hamshouldertop/>
+        <hamplus/>
+        <hamrrat/>
+        <hamshouldertop/>
+      <hamparend/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

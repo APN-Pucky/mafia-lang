@@ -1,0 +1,44 @@
+<sigml>
+  <hns_sign gloss="vote_for_player_number">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger2/>
+      <hamextfingeru/>
+      <hampalmd/>
+      <hamshouldertop/>
+      <hammoveo/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+  <hns_sign gloss="vote_for_player_place">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+
+      <!-- Handshape per hand: fist + thumb up (dominant) placed onto a
+           flat, horizontal hand (passive, like a tabletop) -->
+      <hamparbegin/>
+        <hamfist/>
+        <hamthumboutmod/>
+        <hamextfingeru/>
+        <hampalmu/>
+        <hamplus/>
+        <hamflathand/>
+        <hamextfingerr/>
+        <hampalmu/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hamneutralspace/>
+        <hamplus/>
+        <hamneutralspace/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hamtouch/>
+        <hamplus/>
+        <hamnomotion/>
+      <hamparend/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

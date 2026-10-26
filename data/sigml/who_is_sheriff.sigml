@@ -1,24 +1,26 @@
 <sigml>
-  <hns_sign gloss="sheriff">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
+  <hns_sign gloss="who_is_sheriff">
+    <hamnosys_nonmanual/>
     <hamnosys_manual>
-      <hamcee12/>
-      <hamextfingeru/>
-      <hampalmu/>
-      <hamneutralspace/>
-      <hamnomotion/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="question">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-      <hamfinger2/>
-      <hamfingerhookmod/>
-      <hamextfingero/>
-      <hampalmd/>
-      <hamneutralspace/>
-      <hamcircleu/>
-      <hamsmallmod/>
+
+      <hamparbegin/>
+
+        <!-- First hand: sheriff -->
+        <hampinch12open/>
+        <hamfingerstraightmod/>
+        <hamextfingeru/>
+        <hampalml/>
+
+        <hamplus/>
+
+        <!-- Second hand: question mark -->
+        <hamfinger2/>
+        <hamfingerhookmod/>
+        <hamextfingeru/>
+        <hampalmr/>
+
+      <hamparend/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>
