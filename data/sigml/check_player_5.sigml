@@ -1,26 +1,15 @@
 <sigml>
   <hns_sign gloss="check_player_5_number">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_nonmanual/>
     <hamnosys_manual>
       <hamfinger2345/>
       <hamthumboutmod/>
-      <hamextfingeru/>
+      <hamextfingero/>
       <hampalmd/>
       <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="check_player_5_question">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-      <hamfinger2/>
-      <hamfingerhookmod/>
-      <hamextfingeru/>
-      <hampalml/>
-      <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
+      <hamfingerplay/>
+
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

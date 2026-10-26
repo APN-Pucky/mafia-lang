@@ -2,17 +2,13 @@
   <hns_sign gloss="check_player_2_number">
     <hamnosys_nonmanual/>
     <hamnosys_manual>
-      <hamfinger23/>
+      <hamfinger23spread/>
       <hamextfingero/>
       <hampalmd/>
       <hamshouldertop/>
       <hamfingerplay/>
       
-      <hammovel/>
-      <hamfingerplay/>
-      <hammover/>
-      <hamfingerplay/>
-      <hamrepeatfromstart/>
+   
       
     </hamnosys_manual>
   </hns_sign>

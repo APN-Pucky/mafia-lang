@@ -1,43 +1,29 @@
 <sigml>
-  <hns_sign gloss="kickout_player_2_number">
+  <hns_sign gloss="kickout_player_1_number">
     <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
       <hamfinger23spread/>
-      <hamthumbacrossmod/>
-      <hamextfingeru/>
-      <hampalmd/>
+      <hamextfingero/>
+      <hampalml/>
       <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="kickout_player_2_place">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-      <!-- Handshape per hand: fist + thumb up (dominant) placed onto a
-           flat, horizontal hand (passive, like a tabletop) -->
-      <hamparbegin/>
-        <hamfist/>
-        <hamthumboutmod/>
-        <hamextfingeru/>
-        <hampalmu/>
-        <hamplus/>
-        <hamflathand/>
-        <hamextfingerr/>
-        <hampalmu/>
-      <hamparend/>
 
-      <hamparbegin/>
-        <hamneutralspace/>
-        <hamplus/>
-        <hamneutralspace/>
-      <hamparend/>
+      <hamreplace/>
+      <hamfinger23spread/>
+      <hamextfingerol/>
 
-      <hamparbegin/>
-        <hamtouch/>
-        <hamplus/>
-        <hamnomotion/>
-      <hamparend/>
+    <hamreplace/>
+      <hamfinger23spread/>
+      <hamextfingero/>
+
+
+    <hamreplace/>
+      <hamfinger23spread/>
+      <hamextfingerol/>
+
+    <hamreplace/>
+      <hamfinger23spread/>
+      <hamextfingero/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>
