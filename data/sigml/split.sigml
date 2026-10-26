@@ -1,37 +1,36 @@
 <sigml>
   <hns_sign gloss="split">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-
-      <!-- Handshape per hand: blade hand (flat, vertical, edge-on) vs.
-           passive hand (half-open, being "cut") -->
+    <hamnosys_nonmanual/>
+     <hamnosys_manual>
       <hamparbegin/>
-        <hamflathand/>
-        <hamfingerstraightmod/>
-        <hamextfingerd/>
-        <hampalmr/>
-        <hamplus/>
-        <hamfinger2345/>
-        <hamfingerbendmod/>
-        <hamextfingerr/>
-        <hampalmu/>
+      <hamflathand/>
+      <hamextfingero/>
+      <hampalml/>
+
+      <hamplus/>
+
+      <hamceeall/>
+      <hamthumboutmod/>
+      <hamextfingerr/>
+      <hampalmu/>
+
       <hamparend/>
 
-      <!-- Location per hand: both in front of the body -->
-      <hamparbegin/>
-        <hamneutralspace/>
-        <hamplus/>
-        <hamneutralspace/>
-      <hamparend/>
 
-      <!-- Movement per hand: blade hand saws down repeatedly, passive
-           hand holds still -->
       <hamparbegin/>
-        <hammoved/>
-        <hamrepeatcontinueseveral/>
-        <hamplus/>
-        <hamnomotion/>
+	<hamfingerbase />
+	<hamindexfinger />
+	<hamplus />
+    	<hamfingerbase />
+	<hampinky />
       <hamparend/>
+      <hamtouch/>
+      <hamshouldertop/>
+        <hammoveo/>
+        <hamsmallmod/>
+        <hammovei/>
+        <hamsmallmod/>
+        <hamrepeatfromstart/>
 
     </hamnosys_manual>
   </hns_sign>
