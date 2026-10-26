@@ -16,9 +16,10 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `question_mark` | information | Question Mark (What/Who/Why?) | Hooked index finger or a question mark traced in the air — a universal question, often combined with pointing at a player |
 | `who_is_sheriff` | information | Who is Sheriff? | The Sheriff gesture followed by the question gesture |
 | `not_sheriff` | information | Not Sheriff | The Sheriff gesture followed by a side-to-side "no" wave |
-| `vote` | actions | Vote | Fist, thumb up, placed/struck on the table |
-| `vote_for_player` | actions | Nominate player | Shows a player number, then a fist with thumb up is placed onto the other, flat horizontal hand |
+| `check_player_1`…`check_player_10` | information | Check Player 1–10 | Shows that player number, then the hooked-finger question gesture |
+| `nominate` | actions | Nominate | Shows a player number, then a fist with thumb up is placed onto the other, flat horizontal hand |
 | `kill_player_1`…`kill_player_10` | actions | Kill Player 1–10 | Shows that player number, then the same fingers curl into a repeated hook/claw motion |
+| `kickout_player_1`…`kickout_player_10` | actions | Kick Out Player 1–10 | Shows that player number, then a fist with thumb up is placed onto the other, flat horizontal hand |
 | `shot` | actions | Shot | Index+middle fingers extended like a gun barrel at the head, then curl into a repeated trigger motion |
 | `split` | actions | Split vote | One flat, vertical "blade" hand saws down repeatedly through the other, half-open hand |
 | `next` | actions | Next | Both hands (mirrored, alternating), index fingers pointing out, rotating around each other continuously |
@@ -36,6 +37,7 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `plus` | strategy | Plus | Both hands, index fingers extended, crossing (one vertical, one horizontal) to form a "+" |
 | `minus` | strategy | Minus | One hand, index finger extended horizontally, a flat "−" |
 | `speak` | strategy | Speak | An open hand repeatedly closes into a pinch in front of the body (not at the head, unlike `think`) |
+| `open_up` | strategy | Open Up | Both flat hands, palms facing each other together in the middle, swing apart like opening a book |
 
 ## Known limitations
 

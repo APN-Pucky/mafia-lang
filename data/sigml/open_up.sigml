@@ -1,0 +1,44 @@
+<sigml>
+  <hns_sign gloss="open_up">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+
+      <!-- Handshape per hand: both flat hands -->
+      <hamparbegin/>
+        <hamflathand/>
+        <hamplus/>
+        <hamflathand/>
+      <hamparend/>
+
+      <!-- Orientation per hand: facing each other, palms touching in
+           the middle -->
+      <hamparbegin/>
+        <hamextfingeru/>
+        <hamplus/>
+        <hamextfingeru/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hampalmr/>
+        <hamplus/>
+        <hampalml/>
+      <hamparend/>
+
+      <!-- Location per hand: both together in neutral space -->
+      <hamparbegin/>
+        <hamneutralspace/>
+        <hamplus/>
+        <hamneutralspace/>
+      <hamparend/>
+
+      <!-- Movement per hand: swing apart like opening a book -->
+      <hamparbegin/>
+        <hammovel/>
+        <hamplus/>
+        <hammover/>
+      <hamparend/>
+      <hamsmallmod/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

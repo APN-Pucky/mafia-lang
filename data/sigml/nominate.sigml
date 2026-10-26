@@ -1,5 +1,5 @@
 <sigml>
-  <hns_sign gloss="vote_for_player_number">
+  <hns_sign gloss="nominate_number">
     <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
       <hamfinger2/>
@@ -10,7 +10,7 @@
       <hamsmallmod/>
     </hamnosys_manual>
   </hns_sign>
-  <hns_sign gloss="vote_for_player_place">
+  <hns_sign gloss="nominate_place">
     <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
 

@@ -90,14 +90,9 @@
     "animation": "sigml/who_is_sheriff.sigml"
   },
   {
-    "id": "vote",
+    "id": "nominate",
     "category": "actions",
-    "animation": "sigml/vote.sigml"
-  },
-  {
-    "id": "vote_for_player",
-    "category": "actions",
-    "animation": "sigml/vote_for_player.sigml"
+    "animation": "sigml/nominate.sigml"
   },
   {
     "id": "wait",
@@ -243,5 +238,110 @@
     "id": "shot",
     "category": "actions",
     "animation": "sigml/shot.sigml"
+  },
+  {
+    "id": "check_player_1",
+    "category": "information",
+    "animation": "sigml/check_player_1.sigml"
+  },
+  {
+    "id": "kickout_player_1",
+    "category": "actions",
+    "animation": "sigml/kickout_player_1.sigml"
+  },
+  {
+    "id": "check_player_2",
+    "category": "information",
+    "animation": "sigml/check_player_2.sigml"
+  },
+  {
+    "id": "kickout_player_2",
+    "category": "actions",
+    "animation": "sigml/kickout_player_2.sigml"
+  },
+  {
+    "id": "check_player_3",
+    "category": "information",
+    "animation": "sigml/check_player_3.sigml"
+  },
+  {
+    "id": "kickout_player_3",
+    "category": "actions",
+    "animation": "sigml/kickout_player_3.sigml"
+  },
+  {
+    "id": "check_player_4",
+    "category": "information",
+    "animation": "sigml/check_player_4.sigml"
+  },
+  {
+    "id": "kickout_player_4",
+    "category": "actions",
+    "animation": "sigml/kickout_player_4.sigml"
+  },
+  {
+    "id": "check_player_5",
+    "category": "information",
+    "animation": "sigml/check_player_5.sigml"
+  },
+  {
+    "id": "kickout_player_5",
+    "category": "actions",
+    "animation": "sigml/kickout_player_5.sigml"
+  },
+  {
+    "id": "check_player_6",
+    "category": "information",
+    "animation": "sigml/check_player_6.sigml"
+  },
+  {
+    "id": "kickout_player_6",
+    "category": "actions",
+    "animation": "sigml/kickout_player_6.sigml"
+  },
+  {
+    "id": "check_player_7",
+    "category": "information",
+    "animation": "sigml/check_player_7.sigml"
+  },
+  {
+    "id": "kickout_player_7",
+    "category": "actions",
+    "animation": "sigml/kickout_player_7.sigml"
+  },
+  {
+    "id": "check_player_8",
+    "category": "information",
+    "animation": "sigml/check_player_8.sigml"
+  },
+  {
+    "id": "kickout_player_8",
+    "category": "actions",
+    "animation": "sigml/kickout_player_8.sigml"
+  },
+  {
+    "id": "check_player_9",
+    "category": "information",
+    "animation": "sigml/check_player_9.sigml"
+  },
+  {
+    "id": "kickout_player_9",
+    "category": "actions",
+    "animation": "sigml/kickout_player_9.sigml"
+  },
+  {
+    "id": "check_player_10",
+    "category": "information",
+    "animation": "sigml/check_player_10.sigml"
+  },
+  {
+    "id": "kickout_player_10",
+    "category": "actions",
+    "animation": "sigml/kickout_player_10.sigml"
+  },
+  {
+    "id": "open_up",
+    "category": "strategy",
+    "animation": "sigml/open_up.sigml"
   }
 ]

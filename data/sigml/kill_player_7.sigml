@@ -1,34 +1,31 @@
 <sigml>
-  <hns_sign gloss="kill_player_7">
+  <hns_sign gloss="kill_player_7_number">
     <hamnosys_nonmanual/>
     <hamnosys_manual>
-
      <hamparbegin/>
       <hamfinger2345/>
       <hamthumboutmod/>
       <hamextfingeru/>
       <hampalmd/>
-
       <hamplus/>
-
       <hamfinger23spread/>
       <hamthumbacrossmod/>
       <hamextfingeru/>
       <hampalmd/>
      <hamparend/>
-
-      <hamreplace/>
+    </hamnosys_manual>
+  </hns_sign>
+  <hns_sign gloss="kill_player_7_hook">
+    <hamnosys_nonmanual/>
+    <hamnosys_manual>
      <hamparbegin/>
       <hamfinger2345/>
-      <hamthumboutmod/>
       <hamfingerhookmod/>
       <hamplus/>
       <hamfinger23/>
-      <hamthumbacrossmod/>
       <hamfingerhookmod/>
      <hamparend/>
-      <hamrepeatfromstart/>
-
+     <hamrepeatfromstart/>
     </hamnosys_manual>
   </hns_sign>
 </sigml>

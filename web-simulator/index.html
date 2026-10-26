@@ -97,25 +97,6 @@
             min-height: 44px;
         }
 
-        #category-list {
-            display: flex;
-            gap: 6px;
-            padding: 0 10px 8px;
-            overflow-x: auto;
-        }
-
-        .category-chip {
-            flex-shrink: 0;
-            border: 1px solid #ccc;
-            background: #f4f4f4;
-            border-radius: 999px;
-            padding: 6px 12px;
-            font-size: 12px;
-            min-height: 32px;
-        }
-
-        .category-chip.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
-
         .list-scroll { flex: 1; overflow-y: auto; padding: 0 10px 10px; }
 
         .gesture-item {
@@ -264,7 +245,6 @@
 
         <aside class="sidebar">
             <input id="search-input" type="search" data-i18n-placeholder="ui.searchPlaceholder" placeholder="Search gestures…">
-            <div id="category-list"></div>
             <div class="list-scroll">
                 <div id="gesture-list"></div>
             </div>

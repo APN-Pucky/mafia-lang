@@ -1,0 +1,35 @@
+<sigml>
+  <hns_sign gloss="check_player_9_number">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamparbegin/>
+      <!-- First hand: five fingers -->
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingeru/>
+      <hampalmd/>
+
+      <hamplus/>
+
+      <!-- Second hand: four fingers -->
+      <hamfinger2345/>
+      <hamthumbacrossmod/>
+      <hamextfingeru/>
+      <hampalmd/>
+
+     <hamparend/>
+    </hamnosys_manual>
+  </hns_sign>
+  <hns_sign gloss="check_player_9_question">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger2/>
+      <hamfingerhookmod/>
+      <hamextfingeru/>
+      <hampalml/>
+      <hamshouldertop/>
+      <hammoveo/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

@@ -1,11 +1,8 @@
 (function () {
-    const CATEGORY_ORDER = ['roles', 'information', 'actions', 'strategy'];
-
     let currentGesture = null;
     let playToken = 0;
     let playState = 'idle'; // idle | playing
     let currentSpeed = 1;
-    let activeCategory = 'all';
     let searchTerm = '';
 
     let nativeSpeedUp, nativeSpeedDown, nativeSpeedReset;
@@ -17,7 +14,6 @@
         nativeSpeedReset = document.querySelector('.bttnSpeedReset.av0');
 
         els.searchInput = document.getElementById('search-input');
-        els.categoryList = document.getElementById('category-list');
         els.gestureList = document.getElementById('gesture-list');
         els.gestureName = document.getElementById('gesture-name');
         els.gestureDesc = document.getElementById('gesture-desc');
@@ -49,8 +45,13 @@
     function renderLists() {
         els.gestureList.innerHTML = '';
 
-        const filtered = Gestures.all.filter(g =>
-            (activeCategory === 'all' || g.category === activeCategory) && matchesSearch(g)
+        const filtered = Gestures.all.filter(matchesSearch);
+        // Natural/numeric-aware sort by display name — besides reading
+        // alphabetically, this keeps e.g. "Kick Out Player 2" before
+        // "Kick Out Player 10" (not string order), and as a side effect
+        // clusters "Kick Out Player *" right next to "Kill Player *".
+        filtered.sort((a, b) =>
+            I18N.t(`gestures.${a.id}.name`).localeCompare(I18N.t(`gestures.${b.id}.name`), undefined, { numeric: true, sensitivity: 'base' })
         );
 
         if (filtered.length === 0) {
@@ -68,26 +69,6 @@
     function highlightSelected() {
         document.querySelectorAll('.gesture-item').forEach(el => {
             el.classList.toggle('selected', !!currentGesture && el.dataset.id === currentGesture.id);
-        });
-    }
-
-    function renderCategoryChips() {
-        els.categoryList.innerHTML = '';
-        const chips = [{ id: 'all', key: null }].concat(
-            CATEGORY_ORDER.map(c => ({ id: c, key: `categories.${c}` }))
-        );
-        chips.forEach(c => {
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'category-chip';
-            btn.textContent = c.key ? I18N.t(c.key) : I18N.t('ui.categoriesLabel');
-            btn.classList.toggle('active', activeCategory === c.id);
-            btn.addEventListener('click', () => {
-                activeCategory = c.id;
-                renderCategoryChips();
-                renderLists();
-            });
-            els.categoryList.appendChild(btn);
         });
     }
 
@@ -198,7 +179,6 @@
     }
 
     function renderAll() {
-        renderCategoryChips();
         renderLists();
         renderDetail();
         setPlayState(playState);
