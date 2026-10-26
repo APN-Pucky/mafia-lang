@@ -1,28 +1,31 @@
 <sigml>
   <hns_sign gloss="break">
     <hamnosys_nonmanual/>
-    <hamnosys_manual>
-      <hamsymmlr/>
-
-      <!-- Both hands flat -->
-      <hamflathand/>
-
-      <!-- Different finger directions -->
+     <hamnosys_manual>
       <hamparbegin/>
-        <hamextfingerr/>
-        <hamplus/>
-        <hamextfingeru/>
+      <hamfinger2345/>
+      <hamextfingerl/>
+      <hampalmd/>
+
+      <hamplus/>
+
+      <hamfinger2345/>
+      <hamextfingeru/>
+      <hampalmr/>
+
       <hamparend/>
 
-      <!-- Different palm orientations -->
-      <hamparbegin/>
-        <hampalmd/>
-        <hamplus/>
-        <hampalmo/>
-      <hamparend/>
 
-      <!-- Hand location -->
-      <hamneutralspace/>
+      <hamparbegin/>
+    	<hamfingertip />
+	<hamindexfinger />
+	<hamplus />
+	<hamfingerbase />
+	<hamindexfinger />
+      <hamparend/>
+      <hamtouch/>
+      <hamshouldertop/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>
