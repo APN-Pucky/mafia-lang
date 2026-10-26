@@ -20,11 +20,6 @@
     "animation": "sigml/sheriff.sigml"
   },
   {
-    "id": "sheriff_self",
-    "category": "roles",
-    "animation": "sigml/sheriff_self.sigml"
-  },
-  {
     "id": "me",
     "category": "roles",
     "animation": "sigml/me.sigml"
@@ -137,12 +132,12 @@
   {
     "id": "wait",
     "category": "actions",
-    "animation": null
+    "animation": "sigml/wait.sigml"
   },
   {
     "id": "stop",
     "category": "actions",
-    "animation": null
+    "animation": "sigml/stop.sigml"
   },
   {
     "id": "agree",

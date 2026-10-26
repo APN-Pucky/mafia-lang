@@ -1,16 +1,11 @@
 <sigml>
   <hns_sign gloss="sheriff">
     <hamnosys_nonmanual></hamnosys_nonmanual>
-
     <hamnosys_manual>
-      <hamfinger2/>
-      <hamthumboutmod/>
-      <hamfingerplay/>
-      <hamextfingero/>
-      <hampalmd/>
-      <hamneutralspace/>
-      <hammoveo/>
-      <hamsmallmod/>
+        <hampinch12open/>
+        <hamfingerstraightmod/>
+        <hamextfingeru/>
+        <hampalml/>
     </hamnosys_manual>
   </hns_sign>
 </sigml>
