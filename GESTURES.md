@@ -13,7 +13,7 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `you` | roles | You | Point index finger at another player |
 | `player_number_1`…`player_number_5` | roles | Player 1–5 | That many fingers raised on one hand |
 | `player_number_6`…`player_number_10` | roles | Player 6–10 | Both hands are used above 5; animated here as a sequential approximation (5, then the remainder) — see Known limitations |
-| `check_player` | information | Check / Question | Hooked index finger or a question mark traced in the air, pointed at a player |
+| `question_mark` | information | Question Mark (What/Who/Why?) | Hooked index finger or a question mark traced in the air — a universal question, often combined with pointing at a player |
 | `who_is_sheriff` | information | Who is Sheriff? | The Sheriff gesture followed by the question gesture |
 | `reveal_role` | information | Reveal role | — (no animation yet) |
 | `checked_red` | information | Checked: Red | — (no animation yet) |

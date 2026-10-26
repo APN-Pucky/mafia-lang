@@ -1,25 +1,24 @@
 <sigml>
-  <hns_sign gloss="player_number_6_base5">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
+  <hns_sign gloss="player_number_6">
+    <hamnosys_nonmanual/>
     <hamnosys_manual>
+
+
+     <hamparbegin/>
+      <!-- First hand: five fingers -->
       <hamfinger2345/>
       <hamthumboutmod/>
       <hamextfingeru/>
-      <hampalmu/>
-      <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="player_number_6_remainder1">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
+      <hampalmd/>
+
+      <hamplus/>
+
       <hamfinger2/>
       <hamextfingeru/>
-      <hampalmu/>
-      <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
+      <hampalmd/>
+
+     <hamparend/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

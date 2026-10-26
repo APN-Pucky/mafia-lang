@@ -45,8 +45,6 @@
   "gestures.player_number_9.description": "Числа більше п'яти показуються двома руками; ця анімація наближено показує їх як «5», потім «4».",
   "gestures.player_number_10.name": "Гравець 10",
   "gestures.player_number_10.description": "Числа більше п'яти показуються двома руками; ця анімація наближено показує їх як «5», потім знову «5».",
-  "gestures.check_player.name": "Перевірка / Питання",
-  "gestures.check_player.description": "Зігнутий гачком вказівний палець або знак питання в повітрі, спрямований на гравця — питання про цього гравця.",
   "gestures.who_is_sheriff.name": "Хто шериф?",
   "gestures.who_is_sheriff.description": "Жест «шериф», за яким слідує жест «питання» — запитує, хто шериф.",
   "gestures.reveal_role.name": "Розкрити роль",
@@ -86,5 +84,9 @@
   "gestures.accuse.name": "Звинувачувати",
   "gestures.accuse.description": "Задокументованого жесту для цього значення поки не знайдено.",
   "gestures.conflict.name": "Конфлікт",
-  "gestures.conflict.description": "Задокументованого жесту для цього значення поки не знайдено."
+  "gestures.conflict.description": "Задокументованого жесту для цього значення поки не знайдено.",
+  "gestures.break.name": "Перерва",
+  "gestures.break.description": "Обидві долоні притиснуті одна до одної, пласкі, перед собою — прохання про коротку перерву.",
+  "gestures.question_mark.name": "Знак питання",
+  "gestures.question_mark.description": "Зігнутий гачком вказівний палець або знак питання в повітрі — універсальне питання («що / хто / чому?»), часто поєднується з вказівкою на гравця."
 }

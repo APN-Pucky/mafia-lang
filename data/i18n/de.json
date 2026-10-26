@@ -45,8 +45,6 @@
   "gestures.player_number_9.description": "Zahlen über fünf werden mit beiden Händen gezeigt; diese Animation nähert sich dem mit „5“, gefolgt von „4“ an.",
   "gestures.player_number_10.name": "Spieler 10",
   "gestures.player_number_10.description": "Zahlen über fünf werden mit beiden Händen gezeigt; diese Animation nähert sich dem mit „5“, gefolgt von erneut „5“ an.",
-  "gestures.check_player.name": "Überprüfen / Frage",
-  "gestures.check_player.description": "Ein hakenförmig gebogener Zeigefinger oder ein in die Luft gezeichnetes Fragezeichen, gerichtet auf einen Spieler — fragt nach diesem Spieler.",
   "gestures.who_is_sheriff.name": "Wer ist Sheriff?",
   "gestures.who_is_sheriff.description": "Die Sheriff-Geste gefolgt von der Frage-Geste — fragt, wer der Sheriff ist.",
   "gestures.reveal_role.name": "Rolle aufdecken",
@@ -86,5 +84,9 @@
   "gestures.accuse.name": "Beschuldigen",
   "gestures.accuse.description": "Für diese Bedeutung wurde bisher keine dokumentierte Geste gefunden.",
   "gestures.conflict.name": "Konflikt",
-  "gestures.conflict.description": "Für diese Bedeutung wurde bisher keine dokumentierte Geste gefunden."
+  "gestures.conflict.description": "Für diese Bedeutung wurde bisher keine dokumentierte Geste gefunden.",
+  "gestures.break.name": "Pause (Auszeit)",
+  "gestures.break.description": "Beide Handflächen flach aneinandergelegt, vor dem Körper — bittet um eine kurze Auszeit.",
+  "gestures.question_mark.name": "Fragezeichen",
+  "gestures.question_mark.description": "Ein hakenförmig gebogener Zeigefinger oder ein in die Luft gezeichnetes Fragezeichen — eine allgemeine Frage („was / wer / warum?“), oft kombiniert mit dem Zeigen auf einen Spieler."
 }

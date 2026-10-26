@@ -45,8 +45,6 @@
   "gestures.player_number_9.description": "Числа больше пяти показываются двумя руками; эта анимация приближённо показывает их как «5», затем «4».",
   "gestures.player_number_10.name": "Игрок 10",
   "gestures.player_number_10.description": "Числа больше пяти показываются двумя руками; эта анимация приближённо показывает их как «5», затем снова «5».",
-  "gestures.check_player.name": "Проверка / Вопрос",
-  "gestures.check_player.description": "Согнутый крючком указательный палец или знак вопроса в воздухе, направленный на игрока — вопрос об этом игроке.",
   "gestures.who_is_sheriff.name": "Кто шериф?",
   "gestures.who_is_sheriff.description": "Жест «шериф», за которым следует жест «вопрос» — спрашивает, кто шериф.",
   "gestures.reveal_role.name": "Вскрыться",
@@ -86,5 +84,9 @@
   "gestures.accuse.name": "Обвинять",
   "gestures.accuse.description": "Задокументированный жест для этого значения пока не найден.",
   "gestures.conflict.name": "Конфликт",
-  "gestures.conflict.description": "Задокументированный жест для этого значения пока не найден."
+  "gestures.conflict.description": "Задокументированный жест для этого значения пока не найден.",
+  "gestures.break.name": "Перерыв",
+  "gestures.break.description": "Обе ладони прижаты друг к другу, плоские, перед собой — просьба о коротком перерыве.",
+  "gestures.question_mark.name": "Знак вопроса",
+  "gestures.question_mark.description": "Согнутый крючком указательный палец или знак вопроса в воздухе — универсальный вопрос («что / кто / почему?»), часто сочетается с указанием на игрока."
 }

@@ -31,7 +31,7 @@
       "avList":           "avs",
       "initAv":           "marc",
       "initCamera":       [ 0, 0.23, 3.24, 5, 18, 30, -1, -1 ],
-      "initSpeed":        0,
+      "initSpeed":        -5,
       "rateSpeed":        5,
       "allowFrameSteps":  true,
       "initSiGMLURL":     "iTakeMug.sigml",

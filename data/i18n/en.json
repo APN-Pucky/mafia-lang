@@ -45,8 +45,6 @@
   "gestures.player_number_9.description": "Both hands indicate numbers above 5; this animation approximates it as 5 followed by 4.",
   "gestures.player_number_10.name": "Player 10",
   "gestures.player_number_10.description": "Both hands indicate numbers above 5; this animation approximates it as 5 followed by 5.",
-  "gestures.check_player.name": "Check / Question",
-  "gestures.check_player.description": "A hooked index finger, or a question mark traced in the air, pointing at a player — asks about or questions that player.",
   "gestures.who_is_sheriff.name": "Who is Sheriff?",
   "gestures.who_is_sheriff.description": "The Sheriff gesture followed by the question gesture — asks who the Sheriff is.",
   "gestures.reveal_role.name": "Reveal role",
@@ -86,5 +84,9 @@
   "gestures.accuse.name": "Accuse",
   "gestures.accuse.description": "No documented gesture found for this meaning yet.",
   "gestures.conflict.name": "Conflict",
-  "gestures.conflict.description": "No documented gesture found for this meaning yet."
+  "gestures.conflict.description": "No documented gesture found for this meaning yet.",
+  "gestures.break.name": "Break",
+  "gestures.break.description": "Both palms pressed together, flat, in neutral space — requests a short time-out.",
+  "gestures.question_mark.name": "Question Mark",
+  "gestures.question_mark.description": "A hooked index finger, or a question mark traced in the air — a universal question (“what / who / why?”), often combined with pointing at a player."
 }

@@ -1,13 +1,13 @@
 <sigml>
-  <hns_sign gloss="check_player">
+  <hns_sign gloss="question_mark">
     <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
       <hamfinger2/>
       <hamfingerhookmod/>
-      <hamextfingero/>
-      <hampalmd/>
-      <hamneutralspace/>
-      <hamcircleu/>
+      <hamextfingeru/>
+      <hampalml/>
+      <hamshouldertop/>
+      <hammoveo/>
       <hamsmallmod/>
     </hamnosys_manual>
   </hns_sign>
