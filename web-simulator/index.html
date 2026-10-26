@@ -170,6 +170,44 @@
 
         #gesture-desc { font-size: 13px; color: #444; margin-top: 6px; line-height: 1.4; }
 
+        /* ---------- Controls bar ---------- */
+        .controls-bar {
+            flex-shrink: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-top: 1px solid #ddd;
+            background: #fafafa;
+        }
+
+        .ctrl-btn {
+            border: none;
+            border-radius: 6px;
+            background: #4a9eff;
+            color: #fff;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            min-height: 40px;
+        }
+
+        .ctrl-btn:disabled { background: #c9c9c9; }
+
+        .speed-group { display: flex; gap: 4px; margin-left: auto; }
+
+        .speed-btn {
+            border: 1px solid #ccc;
+            background: #fff;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 12px;
+            min-height: 36px;
+        }
+
+        .speed-btn.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+
         @media (prefers-reduced-motion: reduce) {
             * { scroll-behavior: auto !important; }
         }
@@ -194,6 +232,28 @@
         <section class="avatar-panel">
             <div class="avatar-wrapper">
                 <div class="CWASAAvatar av0"></div>
+            </div>
+
+            <!-- Hidden: only the speed stepper is reachable through CWASA's
+                 native DOM-class auto-wiring (no public JS API for it); true
+                 pause/seek isn't exposed by the engine at all, so Play/Pause/
+                 Replay/Reset are implemented at the app level instead. -->
+            <div hidden>
+                <button class="bttnSpeedUp av0" type="button"></button>
+                <button class="bttnSpeedDown av0" type="button"></button>
+                <button class="bttnSpeedReset av0" type="button"></button>
+            </div>
+
+            <div class="controls-bar">
+                <button id="btn-play" class="ctrl-btn" type="button" data-i18n="ui.play">Play</button>
+                <button id="btn-pause" class="ctrl-btn" type="button" data-i18n="ui.pause">Pause</button>
+                <button id="btn-replay" class="ctrl-btn" type="button" data-i18n="ui.replay">Replay</button>
+                <button id="btn-reset" class="ctrl-btn" type="button" data-i18n="ui.reset">Reset avatar</button>
+                <div class="speed-group">
+                    <button class="speed-btn" type="button" data-speed="0.5">0.5×</button>
+                    <button class="speed-btn active" type="button" data-speed="1">1×</button>
+                    <button class="speed-btn" type="button" data-speed="1.5">1.5×</button>
+                </div>
             </div>
 
             <div class="detail-panel">

@@ -1,4 +1,4 @@
- <sigml>
+<sigml>
   <hns_sign gloss="don">
     <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
@@ -6,9 +6,19 @@
       <hamthumbacrossmod/>
       <hamextfingeru/>
       <hampalmd/>
+      <hamneutralspace/>
 
-
-      <!-- Finger movement rather than whole-hand movement -->
+      <!-- Finger movement rather than whole-hand movement: thumb taps
+           the base of the ring finger, repeatedly -->
+      <hamparbegin/>
+        <hamfingerbase/>
+        <hamringfinger/>
+        <hamplus/>
+        <hamfingertip/>
+        <hamthumb/>
+      <hamparend/>
+      <hamtouch/>
+      <hamrepeatcontinueseveral/>
 
     </hamnosys_manual>
   </hns_sign>

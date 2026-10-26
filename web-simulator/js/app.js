@@ -3,17 +3,29 @@
 
     let currentGesture = null;
     let playToken = 0;
+    let playState = 'idle'; // idle | playing
+    let currentSpeed = 1;
     let activeCategory = 'all';
     let searchTerm = '';
 
+    let nativeSpeedUp, nativeSpeedDown, nativeSpeedReset;
     const els = {};
 
     function cacheEls() {
+        nativeSpeedUp = document.querySelector('.bttnSpeedUp.av0');
+        nativeSpeedDown = document.querySelector('.bttnSpeedDown.av0');
+        nativeSpeedReset = document.querySelector('.bttnSpeedReset.av0');
+
         els.searchInput = document.getElementById('search-input');
         els.categoryList = document.getElementById('category-list');
         els.gestureList = document.getElementById('gesture-list');
         els.gestureName = document.getElementById('gesture-name');
         els.gestureDesc = document.getElementById('gesture-desc');
+        els.playBtn = document.getElementById('btn-play');
+        els.pauseBtn = document.getElementById('btn-pause');
+        els.replayBtn = document.getElementById('btn-replay');
+        els.resetBtn = document.getElementById('btn-reset');
+        els.speedBtns = Array.from(document.querySelectorAll('.speed-btn'));
         els.langBtns = Array.from(document.querySelectorAll('.lang-btn'));
     }
 
@@ -93,10 +105,26 @@
         els.gestureDesc.textContent = desc;
     }
 
-    // Plays the gesture's animation on a loop until a different gesture is
-    // selected (playToken changes), so the avatar is always demonstrating
-    // whatever is currently selected without any manual playback controls.
-    function loopCurrent() {
+    function setPlayState(state) {
+        playState = state;
+        const hasAnim = !!(currentGesture && currentGesture.animation);
+        els.playBtn.disabled = !hasAnim || state === 'playing';
+        els.pauseBtn.disabled = !hasAnim || state !== 'playing';
+        els.replayBtn.disabled = !hasAnim;
+        els.resetBtn.disabled = !hasAnim || state === 'idle';
+    }
+
+    // Plays the current gesture's animation from the start. Gestures with
+    // genuine continuous/repeating motion (flagged `loop: true` in
+    // gestures.json) are auto-replayed; a static held pose is played once
+    // and left alone instead of flickering back through neutral for no
+    // benefit, since there's no motion left to keep demonstrating.
+    //
+    // CWASA plays a SiGML document as an atomic unit and doesn't expose a
+    // true mid-animation pause/seek, so "Pause"/"Reset" below just stop
+    // playback outright rather than freeze a frame — the same constraint
+    // noted in Kozha's own CWASA-based player.
+    function playCurrent() {
         const token = ++playToken;
         const g = currentGesture;
         if (!g || !g.animation) return;
@@ -104,10 +132,44 @@
         function step() {
             if (token !== playToken) return;
             Avatar.playURL(g.animation, {
-                onDone: () => { if (token === playToken) step(); },
+                onSign: () => setPlayState('playing'),
+                onDone: () => {
+                    if (token !== playToken) return;
+                    if (g.loop) { step(); return; }
+                    setPlayState('idle');
+                },
             });
         }
         step();
+    }
+
+    function pauseCurrent() {
+        playToken++; // stop any pending loop continuation
+        Avatar.stop();
+        setPlayState('idle');
+    }
+
+    function replayCurrent() {
+        if (!currentGesture || !currentGesture.animation) return;
+        Avatar.stop();
+        playCurrent();
+    }
+
+    function resetAvatar() {
+        playToken++;
+        Avatar.stop();
+        setPlayState('idle');
+    }
+
+    function setSpeed(mult) {
+        currentSpeed = mult;
+        nativeSpeedReset.click();
+        if (mult === 0.5) {
+            for (let i = 0; i < 5; i++) nativeSpeedDown.click();
+        } else if (mult === 1.5) {
+            for (let i = 0; i < 3; i++) nativeSpeedUp.click();
+        }
+        els.speedBtns.forEach(b => b.classList.toggle('active', Number(b.dataset.speed) === mult));
     }
 
     function selectGesture(id, { updateHash = false } = {}) {
@@ -118,7 +180,7 @@
         currentGesture = g;
         renderDetail();
         highlightSelected();
-        loopCurrent();
+        playCurrent();
         if (updateHash) {
             location.hash = `#/gesture/${id}`;
         }
@@ -139,10 +201,16 @@
         renderCategoryChips();
         renderLists();
         renderDetail();
+        setPlayState(playState);
         highlightLangButtons();
     }
 
     function wireEvents() {
+        els.playBtn.addEventListener('click', playCurrent);
+        els.pauseBtn.addEventListener('click', pauseCurrent);
+        els.replayBtn.addEventListener('click', replayCurrent);
+        els.resetBtn.addEventListener('click', resetAvatar);
+        els.speedBtns.forEach(b => b.addEventListener('click', () => setSpeed(Number(b.dataset.speed))));
         els.searchInput.addEventListener('input', (e) => {
             searchTerm = e.target.value.trim();
             renderLists();
@@ -158,6 +226,7 @@
         cacheEls();
         await Promise.all([I18N.ready, Gestures.ready, Avatar.ready]);
         wireEvents();
+        setSpeed(currentSpeed);
         renderAll();
         handleHash();
     }

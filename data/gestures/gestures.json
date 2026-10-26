@@ -90,26 +90,6 @@
     "animation": "sigml/who_is_sheriff.sigml"
   },
   {
-    "id": "reveal_role",
-    "category": "information",
-    "animation": null
-  },
-  {
-    "id": "checked_red",
-    "category": "information",
-    "animation": null
-  },
-  {
-    "id": "checked_black",
-    "category": "information",
-    "animation": null
-  },
-  {
-    "id": "unknown",
-    "category": "information",
-    "animation": null
-  },
-  {
     "id": "vote",
     "category": "actions",
     "animation": "sigml/vote.sigml"
@@ -117,17 +97,7 @@
   {
     "id": "vote_for_player",
     "category": "actions",
-    "animation": null
-  },
-  {
-    "id": "shoot",
-    "category": "actions",
-    "animation": "sigml/shoot.sigml"
-  },
-  {
-    "id": "next_player",
-    "category": "actions",
-    "animation": null
+    "animation": "sigml/vote_for_player.sigml"
   },
   {
     "id": "wait",
@@ -155,38 +125,123 @@
     "animation": "sigml/together.sigml"
   },
   {
-    "id": "listen",
-    "category": "strategy",
-    "animation": null
-  },
-  {
-    "id": "trust",
-    "category": "strategy",
-    "animation": null
-  },
-  {
-    "id": "distrust",
-    "category": "strategy",
-    "animation": null
-  },
-  {
-    "id": "defend",
-    "category": "strategy",
-    "animation": null
-  },
-  {
-    "id": "accuse",
-    "category": "strategy",
-    "animation": null
-  },
-  {
-    "id": "conflict",
-    "category": "strategy",
-    "animation": null
-  },
-  {
     "id": "break",
     "category": "actions",
     "animation": "sigml/break.sigml"
+  },
+  {
+    "id": "roof",
+    "category": "roles",
+    "animation": "sigml/roof.sigml"
+  },
+  {
+    "id": "if",
+    "category": "strategy",
+    "animation": "sigml/if.sigml"
+  },
+  {
+    "id": "not_sheriff",
+    "category": "information",
+    "animation": "sigml/not_sheriff.sigml"
+  },
+  {
+    "id": "miss",
+    "category": "strategy",
+    "animation": "sigml/miss.sigml"
+  },
+  {
+    "id": "listen",
+    "category": "strategy",
+    "animation": "sigml/listen.sigml"
+  },
+  {
+    "id": "think",
+    "category": "strategy",
+    "animation": "sigml/think.sigml"
+  },
+  {
+    "id": "wins",
+    "category": "strategy",
+    "animation": "sigml/wins.sigml"
+  },
+  {
+    "id": "split",
+    "category": "actions",
+    "animation": "sigml/split.sigml"
+  },
+  {
+    "id": "next",
+    "category": "actions",
+    "animation": "sigml/next.sigml"
+  },
+  {
+    "id": "plus",
+    "category": "strategy",
+    "animation": "sigml/plus.sigml"
+  },
+  {
+    "id": "minus",
+    "category": "strategy",
+    "animation": "sigml/minus.sigml"
+  },
+  {
+    "id": "speak",
+    "category": "strategy",
+    "animation": "sigml/speak.sigml"
+  },
+  {
+    "id": "kill_player_1",
+    "category": "actions",
+    "animation": "sigml/kill_player_1.sigml"
+  },
+  {
+    "id": "kill_player_2",
+    "category": "actions",
+    "animation": "sigml/kill_player_2.sigml"
+  },
+  {
+    "id": "kill_player_3",
+    "category": "actions",
+    "animation": "sigml/kill_player_3.sigml"
+  },
+  {
+    "id": "kill_player_4",
+    "category": "actions",
+    "animation": "sigml/kill_player_4.sigml"
+  },
+  {
+    "id": "kill_player_5",
+    "category": "actions",
+    "animation": "sigml/kill_player_5.sigml"
+  },
+  {
+    "id": "kill_player_6",
+    "category": "actions",
+    "animation": "sigml/kill_player_6.sigml"
+  },
+  {
+    "id": "kill_player_7",
+    "category": "actions",
+    "animation": "sigml/kill_player_7.sigml"
+  },
+  {
+    "id": "kill_player_8",
+    "category": "actions",
+    "animation": "sigml/kill_player_8.sigml"
+  },
+  {
+    "id": "kill_player_9",
+    "category": "actions",
+    "animation": "sigml/kill_player_9.sigml"
+  },
+  {
+    "id": "kill_player_10",
+    "category": "actions",
+    "animation": "sigml/kill_player_10.sigml"
+  },
+  {
+    "id": "shot",
+    "category": "actions",
+    "animation": "sigml/shot.sigml"
   }
 ]

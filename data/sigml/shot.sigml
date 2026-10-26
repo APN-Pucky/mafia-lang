@@ -1,0 +1,19 @@
+<sigml>
+  <hns_sign gloss="shot">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger23/>
+      <hamthumbacrossmod/>
+      <hamextfingeru/>
+      <hampalml/>
+      <hamhead/>
+
+      <hamreplace/>
+      <hamfinger23/>
+      <hamthumbacrossmod/>
+      <hamfingerhookmod/>
+      <hamrepeatfromstart/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

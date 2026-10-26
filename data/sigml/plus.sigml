@@ -1,0 +1,41 @@
+<sigml>
+  <hns_sign gloss="plus">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+
+      <!-- Handshape per hand: both index fingers -->
+      <hamparbegin/>
+        <hamfinger2/>
+        <hamplus/>
+        <hamfinger2/>
+      <hamparend/>
+
+      <!-- Extended finger direction per hand: one vertical, one
+           horizontal, so the two fingers cross to form a "+" -->
+      <hamparbegin/>
+        <hamextfingeru/>
+        <hamplus/>
+        <hamextfingerr/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hampalmd/>
+        <hamplus/>
+        <hampalmd/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hamneutralspace/>
+        <hamplus/>
+        <hamneutralspace/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hamnomotion/>
+        <hamplus/>
+        <hamnomotion/>
+      <hamparend/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

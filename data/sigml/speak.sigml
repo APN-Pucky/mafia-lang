@@ -1,0 +1,14 @@
+<sigml>
+  <hns_sign gloss="speak">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamflathand/>
+      <hamextfingeru/>
+      <hampalml/>
+      <hamneutralspace/>
+      <hamreplace/>
+      <hampinchall/>
+      <hamrepeatfromstart/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

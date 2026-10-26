@@ -1,0 +1,19 @@
+<sigml>
+  <hns_sign gloss="kill_player_4">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger2345/>
+      <hamthumbacrossmod/>
+      <hamextfingeru/>
+      <hampalmd/>
+      <hamneutralspace/>
+
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumbacrossmod/>
+      <hamfingerhookmod/>
+      <hamrepeatfromstart/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>
