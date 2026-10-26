@@ -1,20 +1,40 @@
 <sigml>
   <hns_sign gloss="miss">
-    <hamnosys_nonmanual/>
     <hamnosys_manual>
-      <hamflathand/>
-      <hamthumboutmod/>
-      <hamextfingerl/>
-      <hampalml/>
+      <hamparbegin/>
+        <hamfinger23/>
+        <hamplus/>
+        <hamfinger23/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hamextfingerul/>
+        <hamplus/>
+        <hamextfingerur/>
+      <hamparend/>
+
+      <hamparbegin/>
+        <hampalml/>
+        <hamplus/>
+        <hampalmr/>
+      <hamparend/>
+
+
+      <!-- Location of each hand -->
+      <hamparbegin/>
+        <hamlrat/>
+        <hamshouldertop/>
+        <hamplus/>
+        <hamrrat/>
+        <hamshouldertop/>
+      <hamparend/>
+
       <hamreplace/>
-      <hampinch12open/>
-      <hamthumbopenmod/>
-      <hamindexfinger/>
-      <hamdoublebent/>
-      <hamextfingeru/>
-      <hampalml/>
-      <hammover/>
-      <hamsmallmod/>
+      <hamfinger23/>
+      <hamthumbacrossmod/>
+      <hamfingerhookmod/>
+      <hamrepeatfromstart/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

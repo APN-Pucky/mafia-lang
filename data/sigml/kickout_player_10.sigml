@@ -1,52 +1,38 @@
 <sigml>
-  <hns_sign gloss="kickout_player_10_number">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
+  <hns_sign gloss="kickout_player_10">
+    <hamnosys_nonmanual/>
     <hamnosys_manual>
+
+      <!-- Initial pose: both hands point forward -->
       <hamparbegin/>
-      <!-- First hand: five fingers -->
-      <hamfinger2345/>
-      <hamthumboutmod/>
-      <hamextfingeru/>
-      <hampalmd/>
-
-      <hamplus/>
-
-      <!-- Second hand: five fingers -->
-      <hamfinger2345/>
-      <hamthumboutmod/>
-      <hamextfingeru/>
-      <hampalmd/>
-
-     <hamparend/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="kickout_player_10_place">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-      <!-- Handshape per hand: fist + thumb up (dominant) placed onto a
-           flat, horizontal hand (passive, like a tabletop) -->
-      <hamparbegin/>
-        <hamfist/>
+        <hamfinger2345/>
         <hamthumboutmod/>
-        <hamextfingeru/>
-        <hampalmu/>
+        <hamextfingero/>
+        <hampalml/>
+
         <hamplus/>
-        <hamflathand/>
-        <hamextfingerr/>
-        <hampalmu/>
+
+        <hamfinger2345/>
+        <hamthumboutmod/>
+        <hamextfingero/>
+        <hampalml/>
       <hamparend/>
 
-      <hamparbegin/>
-        <hamneutralspace/>
-        <hamplus/>
-        <hamneutralspace/>
-      <hamparend/>
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingerol/>
 
-      <hamparbegin/>
-        <hamtouch/>
-        <hamplus/>
-        <hamnomotion/>
-      <hamparend/>
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingero/>
+
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingerol/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

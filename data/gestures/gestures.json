@@ -105,16 +105,6 @@
     "animation": "sigml/stop.sigml"
   },
   {
-    "id": "agree",
-    "category": "strategy",
-    "animation": "sigml/agree.sigml"
-  },
-  {
-    "id": "disagree",
-    "category": "strategy",
-    "animation": "sigml/disagree.sigml"
-  },
-  {
     "id": "together",
     "category": "strategy",
     "animation": "sigml/together.sigml"
@@ -343,5 +333,15 @@
     "id": "open_up",
     "category": "strategy",
     "animation": "sigml/open_up.sigml"
+  },
+  {
+    "id": "secret_sheriff",
+    "category": "roles",
+    "animation": "sigml/secret_sheriff.sigml"
+  },
+  {
+    "id": "foul",
+    "category": "actions",
+    "animation": "sigml/foul.sigml"
   }
 ]

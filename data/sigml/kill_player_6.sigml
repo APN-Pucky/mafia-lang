@@ -1,30 +1,29 @@
 <sigml>
-  <hns_sign gloss="kill_player_6_number">
+  <hns_sign gloss="kill_player_6">
     <hamnosys_nonmanual/>
     <hamnosys_manual>
-     <hamparbegin/>
-      <hamfinger2345/>
-      <hamthumboutmod/>
-      <hamextfingeru/>
-      <hampalmd/>
-      <hamplus/>
-      <hamfinger2/>
-      <hamextfingeru/>
-      <hampalmd/>
-     <hamparend/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="kill_player_6_hook">
-    <hamnosys_nonmanual/>
-    <hamnosys_manual>
-     <hamparbegin/>
+
+      <!-- Initial pose: 5 + 1 -->
+      <hamparbegin/>
+        <hamfinger2345/>
+        <hamthumboutmod/>
+        <hamextfingeru/>
+        <hampalmd/>
+
+        <hamplus/>
+
+        <hamfinger2/>
+        <hamextfingeru/>
+        <hampalmd/>
+      <hamparend/>
+
+      <!-- Hook: only the primary 5-finger hand curls -->
+      <hamreplace/>
       <hamfinger2345/>
       <hamfingerhookmod/>
-      <hamplus/>
-      <hamfinger2/>
-      <hamfingerhookmod/>
-     <hamparend/>
-     <hamrepeatfromstart/>
+
+      <hamrepeatfromstart/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

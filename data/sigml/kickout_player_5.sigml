@@ -4,40 +4,30 @@
     <hamnosys_manual>
       <hamfinger2345/>
       <hamthumboutmod/>
-      <hamextfingeru/>
-      <hampalmd/>
+      <hamextfingero/>
+      <hampalml/>
       <hamshouldertop/>
-      <hammoveo/>
-      <hamsmallmod/>
-    </hamnosys_manual>
-  </hns_sign>
-  <hns_sign gloss="kickout_player_5_place">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
-    <hamnosys_manual>
-      <!-- Handshape per hand: fist + thumb up (dominant) placed onto a
-           flat, horizontal hand (passive, like a tabletop) -->
-      <hamparbegin/>
-        <hamfist/>
-        <hamthumboutmod/>
-        <hamextfingeru/>
-        <hampalmu/>
-        <hamplus/>
-        <hamflathand/>
-        <hamextfingerr/>
-        <hampalmu/>
-      <hamparend/>
 
-      <hamparbegin/>
-        <hamneutralspace/>
-        <hamplus/>
-        <hamneutralspace/>
-      <hamparend/>
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingerol/>
 
-      <hamparbegin/>
-        <hamtouch/>
-        <hamplus/>
-        <hamnomotion/>
-      <hamparend/>
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingero/>
+
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingerol/>
+
+      <hamreplace/>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingero/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

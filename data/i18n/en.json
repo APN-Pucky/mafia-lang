@@ -53,10 +53,6 @@
   "gestures.wait.description": "Both hands (mirrored), fist with thumb crossed, circling between an outward and upward position at the shoulders — asks the other player to wait.",
   "gestures.stop.name": "Stop",
   "gestures.stop.description": "Both hands (mirrored), flat palm down at the shoulders, a small outward nudge then a halt — signals stop.",
-  "gestures.agree.name": "Agree",
-  "gestures.agree.description": "A nod, or a thumbs up.",
-  "gestures.disagree.name": "Disagree",
-  "gestures.disagree.description": "A head shake, or crossed arms.",
   "gestures.together.name": "Together",
   "gestures.together.description": "Two players show the same handshape side by side to indicate they are on the same team.",
   "gestures.break.name": "Break",
@@ -152,5 +148,9 @@
   "gestures.open_up.name": "Open Up",
   "gestures.open_up.description": "Both hands, flat, palms facing each other together in the middle, swing apart like opening a book.",
   "gestures.nominate.name": "Nominate",
-  "gestures.nominate.description": "First shows a player number (like “Player 1”), then a closed fist with thumb up is placed onto the other, flat horizontal hand — proposes that player for voting."
+  "gestures.nominate.description": "First shows a player number (like “Player 1”), then a closed fist with thumb up is placed onto the other, flat horizontal hand — proposes that player for voting.",
+  "gestures.secret_sheriff.name": "Secret Sheriff",
+  "gestures.secret_sheriff.description": "Just a wink — no hand gesture at all. A discreet, hands-free way for the Sheriff to signal themselves.",
+  "gestures.foul.name": "Foul",
+  "gestures.foul.description": "Index finger traces a checkmark-like motion (`hamseqbegin`/`hamseqend`: a short stroke down-right, then a longer stroke up-right) — marks a rule violation."
 }

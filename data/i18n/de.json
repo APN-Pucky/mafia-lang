@@ -53,10 +53,6 @@
   "gestures.wait.description": "Beide Hände (gespiegelt), Faust mit gekreuztem Daumen, kreisend zwischen einer auswärts und einer aufwärts gerichteten Position an den Schultern — bittet den anderen Spieler zu warten.",
   "gestures.stop.name": "Stopp",
   "gestures.stop.description": "Beide Hände (gespiegelt), flache Handfläche nach unten an den Schultern, ein kleiner Ruck nach außen und ein Halt — signalisiert Stopp.",
-  "gestures.agree.name": "Zustimmen",
-  "gestures.agree.description": "Ein Nicken oder Daumen hoch.",
-  "gestures.disagree.name": "Ablehnen",
-  "gestures.disagree.description": "Kopfschütteln oder verschränkte Arme.",
   "gestures.together.name": "Zusammen",
   "gestures.together.description": "Zwei Spieler zeigen nebeneinander dieselbe Handform, um zu signalisieren, dass sie im selben Team sind.",
   "gestures.break.name": "Pause (Auszeit)",
@@ -152,5 +148,9 @@
   "gestures.open_up.name": "Öffnen",
   "gestures.open_up.description": "Beide Hände, flach, Handflächen einander zugewandt in der Mitte zusammen, schwingen auseinander wie ein aufgeschlagenes Buch.",
   "gestures.nominate.name": "Vorschlagen",
-  "gestures.nominate.description": "Zeigt zuerst eine Spielernummer (wie „Spieler 1“), dann wird eine geschlossene Faust mit erhobenem Daumen auf die andere, flache waagerechte Hand gelegt — schlägt diesen Spieler zur Abstimmung vor."
+  "gestures.nominate.description": "Zeigt zuerst eine Spielernummer (wie „Spieler 1“), dann wird eine geschlossene Faust mit erhobenem Daumen auf die andere, flache waagerechte Hand gelegt — schlägt diesen Spieler zur Abstimmung vor.",
+  "gestures.secret_sheriff.name": "Geheimer Sheriff",
+  "gestures.secret_sheriff.description": "Nur ein Augenzwinkern — ganz ohne Handgeste. Eine unauffällige Möglichkeit für den Sheriff, sich zu erkennen zu geben.",
+  "gestures.foul.name": "Foul",
+  "gestures.foul.description": "Der Zeigefinger zeichnet eine häkchenähnliche Bewegung (`hamseqbegin`/`hamseqend`: ein kurzer Strich nach rechts unten, dann ein längerer Strich nach rechts oben) — markiert einen Regelverstoß."
 }
