@@ -1,14 +1,24 @@
 <sigml>
   <hns_sign gloss="speak">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_nonmanual/>
     <hamnosys_manual>
-      <hamflathand/>
-      <hamextfingeru/>
-      <hampalml/>
-      <hamneutralspace/>
-      <hamreplace/>
+      <!-- Fingers and thumb form a talking hand -->
       <hampinchall/>
+      <hamextfingerul/>
+      <hampalmd/>
+  <hamshouldertop/>
+      <hammouth/>
+
+   <!-- Open the hand -->
+      <hamreplace/>
+      <hamflathand/>
+      <hamthumbopenmod/>
+      <hamextfingerul/>
+      <hampalmd/>
+
+      <!-- Repeat opening and closing -->
       <hamrepeatfromstart/>
+   
     </hamnosys_manual>
   </hns_sign>
 </sigml>

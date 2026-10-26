@@ -95,19 +95,9 @@
     "animation": "sigml/nominate.sigml"
   },
   {
-    "id": "wait",
-    "category": "actions",
-    "animation": "sigml/wait.sigml"
-  },
-  {
     "id": "stop",
     "category": "actions",
     "animation": "sigml/stop.sigml"
-  },
-  {
-    "id": "together",
-    "category": "strategy",
-    "animation": "sigml/together.sigml"
   },
   {
     "id": "break",
