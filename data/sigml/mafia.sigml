@@ -1,0 +1,12 @@
+<sigml>
+  <hns_sign gloss="citizen">
+    <hamnosys_nonmanual/>
+    <hamnosys_manual>
+      <hamfist/>
+      <hamthumboutmod/>
+      <hamextfingero/>
+      <hampalmr/>
+      <hamneutralspace/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

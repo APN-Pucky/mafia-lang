@@ -1,0 +1,26 @@
+<sigml>
+  <hns_sign gloss="player_number_7_base5">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger2345/>
+      <hamthumboutmod/>
+      <hamextfingeru/>
+      <hampalmu/>
+      <hamshouldertop/>
+      <hammoveo/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+  <hns_sign gloss="player_number_7_remainder2">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger23spread/>
+      <hamthumbacrossmod/>
+      <hamextfingeru/>
+      <hampalmu/>
+      <hamshouldertop/>
+      <hammoveo/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

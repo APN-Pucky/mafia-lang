@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>3D ArSL Avatar</title>
+    <title>Mafia Signs</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="cwa/cwasa.css" />
     <script src="cwa/allcsa.js"></script>
@@ -11,167 +11,208 @@
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: system-ui, sans-serif;
+        html, body {
+            height: 100%;
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
             background: #f5f5f5;
+            color: #1a1a1a;
+        }
+
+        body { display: flex; flex-direction: column; overflow: hidden; }
+
+        button { font: inherit; cursor: pointer; }
+        button:disabled { cursor: not-allowed; opacity: 0.5; }
+
+        /* ---------- Header ---------- */
+        #app-header {
+            flex-shrink: 0;
             display: flex;
-            flex-direction: column;
-            height: 100vh;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 16px;
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        #app-header .titles { min-width: 0; }
+        #app-header h1 { font-size: 18px; line-height: 1.2; }
+        #app-header p { font-size: 11px; color: #b8bcd4; margin-top: 2px; }
+
+        #lang-switch { display: flex; gap: 4px; flex-shrink: 0; }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #44486a;
+            color: #cfd2e8;
+            border-radius: 6px;
+            padding: 6px 9px;
+            font-size: 12px;
+            font-weight: 600;
+            min-height: 36px;
+        }
+
+        .lang-btn.active { background: #4a9eff; border-color: #4a9eff; color: #fff; }
+
+        /* ---------- Layout ---------- */
+        .layout {
+            flex: 1;
+            min-height: 0;
+            display: grid;
+            grid-template-areas: "avatar" "sidebar";
+            grid-template-rows: minmax(0, 1.3fr) minmax(0, 1fr);
+            grid-template-columns: 1fr;
+            gap: 0;
             overflow: hidden;
         }
 
-        /* ── Avatar ── */
-        #avatar-wrapper {
-            flex: 1;
+        @media (min-width: 821px) {
+            .layout {
+                grid-template-areas: "sidebar avatar";
+                grid-template-columns: 290px 1fr;
+                grid-template-rows: 1fr;
+            }
+        }
+
+        /* ---------- Sidebar ---------- */
+        .sidebar {
+            grid-area: sidebar;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            border-top: 1px solid #ddd;
+            background: #fff;
+        }
+
+        @media (min-width: 821px) {
+            .sidebar { border-top: none; border-right: 1px solid #ddd; }
+        }
+
+        #search-input {
+            margin: 10px;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            min-height: 44px;
+        }
+
+        #category-list {
+            display: flex;
+            gap: 6px;
+            padding: 0 10px 8px;
+            overflow-x: auto;
+        }
+
+        .category-chip {
+            flex-shrink: 0;
+            border: 1px solid #ccc;
+            background: #f4f4f4;
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 12px;
+            min-height: 32px;
+        }
+
+        .category-chip.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+
+        .list-scroll { flex: 1; overflow-y: auto; padding: 0 10px 10px; }
+
+        .gesture-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            width: 100%;
+            text-align: left;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 6px;
+            background: none;
+            font-size: 14px;
+            min-height: 40px;
+        }
+
+        .gesture-item:hover { background: #eef3fc; }
+        .gesture-item.selected { background: #0078d4; color: #fff; }
+
+        .gesture-item.no-animation { color: #aaa; }
+
+        .empty-note { font-size: 13px; color: #999; padding: 10px; }
+
+        /* ---------- Avatar panel ---------- */
+        .avatar-panel {
+            grid-area: avatar;
+            display: flex;
+            flex-direction: column;
             min-height: 0;
             background: #fff;
         }
 
+        .avatar-wrapper {
+            flex: 1;
+            min-height: 120px;
+            background: #eceef2;
+            touch-action: none;
+        }
+
         .CWASAAvatar { width: 100%; height: 100%; }
 
-        /* ── Bottom panel ── */
-        #bottom-panel {
+        .detail-panel {
             flex-shrink: 0;
-            display: flex;
-            height: 38vh;
-            min-height: 160px;
-            border-top: 1px solid #ddd;
-            background: #f9f9f9;
-            gap: 8px;
-            padding: 8px;
-        }
-
-        /* ── Shared list box ── */
-        .list-box {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            background: #fff;
-            overflow: hidden;
-        }
-
-        .list-box-label {
-            padding: 6px 10px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #888;
-            background: #f4f4f4;
-            border-bottom: 1px solid #ddd;
-            letter-spacing: 0.04em;
-            flex-shrink: 0;
-        }
-
-        .list-box-scroll {
-            flex: 1;
+            max-height: 30vh;
             overflow-y: auto;
+            padding: 10px 14px 14px;
+            border-top: 1px solid #ddd;
         }
 
-        .list-item {
-            display: block;
-            width: 100%;
-            padding: 8px 12px;
-            border: none;
-            border-bottom: 1px solid #f0f0f0;
-            background: none;
-            text-align: right;
-            font-size: 14px;
-            color: #222;
-            cursor: pointer;
-            white-space: nowrap;
-        }
+        #gesture-name { font-size: 16px; display: block; }
 
-        .list-item:last-child { border-bottom: none; }
-        .list-item:hover { background: #e8f0fe; color: #1a5faa; }
+        #gesture-desc { font-size: 13px; color: #444; margin-top: 6px; line-height: 1.4; }
 
-        .list-item.selected {
-            background: #0078d4;
-            color: #fff;
-        }
-
-        /* ── Sizing ── */
-        #cat-box  { width: 140px; flex-shrink: 0; }
-        #word-box { flex: 1; min-width: 0; }
-
-        /* ── Mobile: stack vertically ── */
-        @media (max-width: 540px) {
-            #bottom-panel {
-                flex-direction: column;
-                height: 45vh;
-            }
-
-            #cat-box  { width: 100%; flex-shrink: 0; height: 38%; }
-            #word-box { flex: 1; }
+        @media (prefers-reduced-motion: reduce) {
+            * { scroll-behavior: auto !important; }
         }
     </style>
 </head>
-
 <body onload="CWASA.init();">
 
-    <div id="avatar-wrapper">
-        <div class="CWASAAvatar av0"></div>
-    </div>
-
-    <div id="bottom-panel">
-        <div id="word-box" class="list-box">
-            <div class="list-box-label">الكلمات</div>
-            <div class="list-box-scroll" id="word-list"></div>
+    <header id="app-header">
+        <div class="titles">
+            <h1 data-i18n="app.title">Mafia Signs</h1>
+            <p data-i18n="app.subtitle">Interactive gesture dictionary for competitive Sports Mafia</p>
         </div>
-        <div id="cat-box" class="list-box">
-            <div class="list-box-label">الفئات</div>
-            <div class="list-box-scroll" id="cat-list"></div>
+        <div id="lang-switch">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="uk">UK</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="de">DE</button>
         </div>
-    </div>
+    </header>
 
-    <script>
-        let activeCat = null;
-        let activeWord = null;
+    <main class="layout">
+        <section class="avatar-panel">
+            <div class="avatar-wrapper">
+                <div class="CWASAAvatar av0"></div>
+            </div>
 
-        Avatar.ready.then(() => {
-            const catList = document.getElementById('cat-list');
-            const dict = Avatar.dictionary;
-            let firstEl = null;
+            <div class="detail-panel">
+                <span id="gesture-name"></span>
+                <p id="gesture-desc" data-i18n="ui.selectPrompt">Select a gesture to see it demonstrated.</p>
+            </div>
+        </section>
 
-            for (const cat in dict) {
-                const btn = document.createElement('button');
-                btn.className = 'list-item';
-                btn.textContent = cat;
-                btn.onclick = () => selectCategory(cat, btn);
-                catList.appendChild(btn);
-                if (!firstEl) firstEl = { cat, btn };
-            }
+        <aside class="sidebar">
+            <input id="search-input" type="search" data-i18n-placeholder="ui.searchPlaceholder" placeholder="Search gestures…">
+            <div id="category-list"></div>
+            <div class="list-scroll">
+                <div id="gesture-list"></div>
+            </div>
+        </aside>
+    </main>
 
-            if (firstEl) selectCategory(firstEl.cat, firstEl.btn);
-        });
-
-        function selectCategory(cat, btn) {
-            if (activeCat) activeCat.classList.remove('selected');
-            activeCat = btn;
-            btn.classList.add('selected');
-
-            const wordList = document.getElementById('word-list');
-            wordList.innerHTML = '';
-            activeWord = null;
-
-            Avatar.dictionary[cat].forEach(word => {
-                const wb = document.createElement('button');
-                wb.className = 'list-item';
-                wb.textContent = word;
-                wb.onclick = () => signWord(word, wb);
-                wordList.appendChild(wb);
-            });
-        }
-
-        function signWord(word, btn) {
-            if (activeWord) activeWord.classList.remove('selected');
-            activeWord = btn;
-            btn.classList.add('selected');
-            Avatar.stop();
-            Avatar.sign(word, {
-                onDone: () => btn.classList.remove('selected')
-            });
-        }
-    </script>
-
+    <script src="js/i18n.js"></script>
+    <script src="js/gestures.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,39 +1,30 @@
-# Arabic Sign Language Avatar
+# Mafia Signs
 
-A web-based system that translates Arabic text into Arabic Sign Language (ArSL) animations rendered by a 3D avatar in real time.
+Interactive gesture dictionary for competitive Sports Mafia (Спортивная мафия). Pick a gesture, watch a 3D avatar demonstrate it — in English, Ukrainian, Russian, or German.
 
-> This is a fork of [linuxscout/algerianSignLanguage-avatar](https://github.com/linuxscout/algerianSignLanguage-avatar).
+> This is a fork of [linuxscout/algerianSignLanguage-avatar](https://github.com/linuxscout/algerianSignLanguage-avatar), repurposed from an Arabic Sign Language avatar into a Sports Mafia hand-signal reference. It reuses the original project's 3D avatar rendering and SiGML animation pipeline; only the dictionary content, UI, and translations are new. See [`CREDITS`](CREDITS) for full attribution.
+
+Gesture conventions vary between Mafia clubs and tournament organizations — see [`GESTURES.md`](GESTURES.md) for the full gesture list and known limitations.
 
 ---
 
 ## How It Works
 
-There are two ways to drive the avatar, depending on which interface you use:
+**1. Selection.** The user searches or browses categories (Roles, Information, Actions, Strategy) and picks a gesture. Gesture IDs are language-independent, so switching the UI language never changes what's selected.
 
-### Standalone UI (`/`)
+**2. Lookup.** Each gesture in `data/gestures/gestures.json` either references a [SiGML](https://vh.cmp.uea.ac.uk/index.php/SiGML) file in `data/sigml/`, or has `animation: null` if no animation has been authored yet.
 
-The pipeline has three stages:
-
-**1. Input**
-The user picks a word from the UI. A sliding-window algorithm matches each word (or phrase) against the dictionary.
-
-**2. Lookup**
-Each matched word maps to a [SiGML](https://vh.cmp.uea.ac.uk/index.php/SiGML) (Signing Gesture Markup Language) file. SiGML is an XML-based format derived from [HamNoSys](https://www.sign-lang.uni-hamburg.de/hamnosys.html) (Hamburg Notation System), a phonetic notation for sign languages. The dictionary lives in `data/dictionary.json`; the SiGML files live in `data/sigml/`. Both are symlinked into `web-simulator/` so the dev server and build see them automatically.
-
-**3. Rendering**
-The [CWASA](https://vh.cmp.uea.ac.uk/index.php/CWA_Signing_Avatars) (CWA Signing Avatars) JavaScript library (`web-simulator/cwa/allcsa.js`) receives the SiGML and drives a 3D avatar through the corresponding gesture sequence. Timing is controlled via `web-simulator/avatar.json`.
+**3. Rendering.** The [CWASA](https://vh.cmp.uea.ac.uk/index.php/CWA_Signing_Avatars) JavaScript library (`web-simulator/cwa/allcsa.js`) renders the SiGML on a 3D avatar. Selecting a gesture plays it immediately and loops it continuously until another gesture is selected — there are no separate play/pause/speed controls to operate. Camera rotate/zoom (drag / shift-drag or pinch on the avatar) is built into CWASA itself.
 
 ```
-word selection  →  dictionary lookup  →  SiGML file  →  CWASA renderer  →  3D avatar animation
+search/category selection → gesture lookup → SiGML file → CWASA renderer → 3D avatar animation
 ```
+
+Translations are a separate layer: `data/i18n/{en,uk,ru,de}.json` hold only display text (names, descriptions, UI labels). The same animation plays regardless of language.
 
 ### Embed iframe (`/embed`) and Playground (`/playground`)
 
-These bypass the dictionary entirely. The caller provides raw SiGML content directly and CWASA renders it immediately — no lookup, no file on disk required.
-
-```
-raw SiGML  →  CWASA renderer  →  3D avatar animation
-```
+These bypass the dictionary entirely — the caller provides raw SiGML content directly and CWASA renders it immediately. Useful for testing new gestures or embedding the bare avatar in another page. See [Embed Iframe Endpoint](#embed-iframe-endpoint) below.
 
 ---
 
@@ -41,8 +32,8 @@ raw SiGML  →  CWASA renderer  →  3D avatar animation
 
 | Requirement | Notes |
 |-------------|-------|
-| Python 3.9+ | FastAPI + uvicorn |
-| A modern web browser | Chrome, Firefox, Safari, or Edge |
+| Python 3.9+ | FastAPI + uvicorn (used for local dev and the static build script only) |
+| A modern web browser | Chrome, Firefox, Safari, or Edge — no backend required to run the built site |
 
 ---
 
@@ -69,7 +60,7 @@ poetry run python -m uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 
 | URL | Description |
 |-----|-------------|
-| `http://localhost:8000/` | Full standalone UI |
+| `http://localhost:8000/` | Mafia Signs — full gesture dictionary |
 | `http://localhost:8000/embed` | Avatar-only iframe endpoint |
 | `http://localhost:8000/playground` | SiGML playground — paste raw SiGML and watch the avatar sign it |
 
@@ -83,54 +74,64 @@ poetry run python -m uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 
 ## Configuring the Avatar
 
-All runtime tuning lives in **`web-simulator/avatar.json`**. Edit this file to change behaviour without touching any code:
+Runtime timing lives in **`web-simulator/avatar.json`**:
 
 ```json
 {
-  "signDuration": 1000,
-  "dictionary": "dict/dictionary.json"
+  "signDuration": 1000
 }
 ```
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `signDuration` | number (ms) | How long the avatar waits between signs. Increase if signs feel rushed, decrease if they feel slow. |
-| `dictionary` | string (path) | Path to the dictionary file, relative to the page root. |
+`signDuration` (ms) is the fallback duration used to detect "done" after starting playback (and so when to loop back to the start), for gestures that don't explicitly signal completion.
+
+Avatar list, canvas size, and default camera angle live in `web-simulator/cwa/cwacfg.json` — part of the bundled CWASA engine.
 
 ---
 
-## Managing the Dictionary
+## Adding a Gesture
 
-The dictionary is used only by the **standalone UI** (`/`). The embed and playground accept raw SiGML directly and do not consult it.
-
-The dictionary lives in **`data/dictionary.json`**. It is a JSON object where each key is a category name and each value is an array of words that have a corresponding SiGML file in `data/sigml/`.
+Gestures live in **`data/gestures/gestures.json`** — a flat array, each entry:
 
 ```json
 {
-  "الارقام": ["واحد", "اثنان", "ثلاثة", "أربعة", "خمسة", "ستة", "سبعة", "ثمانية", "تسعة", "عشرة"]
+  "id": "citizen",
+  "category": "roles",
+  "animation": "sigml/citizen.sigml"
 }
 ```
 
-### Adding a new word
+| Field | Meaning |
+|-------|---------|
+| `id` | Language-independent, used as the SiGML filename stem and the i18n key suffix. Never change an existing id — it's also the deep-link slug (`#/gesture/<id>`). |
+| `category` | One of `roles`, `information`, `actions`, `strategy` (must have a matching `categories.<category>` i18n key). |
+| `animation` | Path under `data/sigml/`, or `null` if no animation has been authored yet. The UI never substitutes another gesture's animation when this is `null`. |
 
-1. Add the SiGML file for the word to `data/sigml/<word>.sigml`
-2. Add the word string to the appropriate category array in `data/dictionary.json`
-3. If the word belongs to a new category, add a new key to the JSON object
+To add a new gesture:
 
-That's it — the symlinks mean the dev server and static build both pick it up automatically.
+1. Add the entry to `data/gestures/gestures.json` (`animation: null` if you don't have one yet).
+2. Add `gestures.<id>.name` and `gestures.<id>.description` keys to **all four** `data/i18n/*.json` files (see [Adding or Modifying Translations](#adding-or-modifying-translations)).
+3. If you have an animation, author the SiGML file (see below) and set `animation`.
+4. Update [`GESTURES.md`](GESTURES.md) with the meaning and any caveats.
 
-### Adding a new category
+---
 
-Add a new top-level key to `data/dictionary.json`:
+## Adding an Animation
 
-```json
-{
-  "الارقام": ["واحد", "اثنان", ...],
-  "التحيات": ["مرحبا", "شكرا", ...]
-}
-```
+SiGML files live in **`data/sigml/<id>.sigml`**, symlinked into `web-simulator/sigml/` automatically. See [`sigml-reference.md`](sigml-reference.md) for the full, tested HamNoSys/SiGML tag reference used in this build (handshapes, orientation, location, movement, sequencing, and the two-hand `hamsymmlr`/`hamsymmpar` primitives) and [`docs/`](docs/) for the underlying HamNoSys/eSIGN specifications.
 
-Each word in the array must have a matching `.sigml` file in `data/sigml/`.
+Use `/playground` to test a new SiGML snippet live before committing it — paste it into the textarea and press Play (or Ctrl+Enter).
+
+A `<sigml>` document can contain multiple `<hns_sign>` blocks, which play back-to-back — useful for multi-step gestures (see `data/sigml/who_is_sheriff.sigml` or any `player_number_6`–`10` file for examples).
+
+---
+
+## Adding or Modifying Translations
+
+Translations are flat key→string JSON files in **`data/i18n/`**: `en.json`, `uk.json`, `ru.json`, `de.json`. Every file must have **exactly the same keys** — `poetry run python -m pytest tests/test_i18n.py` checks this.
+
+- UI chrome strings use the `ui.*` and `categories.*` prefixes.
+- Every gesture needs `gestures.<id>.name` and `gestures.<id>.description` in all four files.
+- The language switcher in the header persists the choice to `localStorage` and detects the browser's preferred language on first visit (falling back to English). Switching languages re-renders text in place — it never reloads the page or resets the avatar/selected gesture.
 
 ---
 
@@ -152,89 +153,44 @@ Each word in the array must have a matching `.sigml` file in `data/sigml/`.
 
 ### Sending commands (`parent → iframe`)
 
-Use `postMessage` to control the avatar from the parent page:
-
 ```js
 const avatar = document.getElementById('avatar').contentWindow;
 
-// Play a SiGML string directly — the avatar renders it immediately
 avatar.postMessage({ type: 'sign', sigml: '<sigml>...</sigml>' }, '*');
-
-// Stop the current animation
 avatar.postMessage({ type: 'stop' }, '*');
 ```
 
 ### Receiving status events (`iframe → parent`)
 
-The iframe posts status events back so the parent can react to the animation lifecycle:
-
 ```js
 window.addEventListener('message', (event) => {
   const { type, ...payload } = event.data;
-
   switch (type) {
-    case 'ready':
-      // Avatar initialised, ready to receive commands
-      break;
-
-    case 'signing':
-      // Animation started
-      break;
-
-    case 'done':
-      // Animation finished
-      break;
-
-    case 'error':
-      // sigml field was empty or missing
-      // payload: { reason: 'no sigml provided' }
-      break;
+    case 'ready':   break; // Avatar initialised
+    case 'signing': break; // Animation started
+    case 'done':    break; // Animation finished
+    case 'error':   break; // payload: { reason: 'no sigml provided' }
   }
 });
 ```
 
 ### Origin security
 
-In development `ALLOWED_ORIGIN=*` allows any parent page to send commands. In production set it to your frontend's exact origin in `.env`:
-
-```
-ALLOWED_ORIGIN=https://your-frontend.com
-```
-
-The iframe will silently ignore `postMessage` events from any other origin.
+In development `ALLOWED_ORIGIN=*` allows any parent page to send commands. In production set it to your frontend's exact origin in `.env`. The iframe silently ignores `postMessage` events from any other origin.
 
 ---
 
 ## Deploying to GitHub Pages
 
-The repository includes a build script and a GitHub Actions workflow that automatically deploys the avatar as a static site to GitHub Pages on every push to `master`.
-
-### Setup
-
-1. Go to your repository **Settings → Pages**
-2. Under **Build and deployment**, set the source to **GitHub Actions**
-3. Push to `master` — the workflow triggers automatically and deploys the site
-
-### URLs after deployment
-
-| URL | Description |
-|-----|-------------|
-| `https://<user>.github.io/<repo>/` | Full standalone UI |
-| `https://<user>.github.io/<repo>/embed` | Avatar-only iframe endpoint |
-| `https://<user>.github.io/<repo>/playground` | SiGML playground |
-
-### Origin configuration
-
-The GitHub Pages deployment builds with `ALLOWED_ORIGIN=*` by default, meaning any frontend can embed and use the iframe.
-
-To restrict it to a specific frontend, pass `--origin` to `build.py` in the workflow:
-
-```yaml
-- name: Build static site
-  run: python build.py --origin "https://your-frontend.com"
+```bash
+python build.py            # outputs to pages/, ALLOWED_ORIGIN=*
+python build.py --origin "https://your-frontend.com"   # restrict the embed's allowed origin
 ```
 
-Or omit `--origin` entirely to keep the default `*`.
+1. Go to your repository **Settings → Pages**, set the source to **GitHub Actions**.
+2. Push to `master` — `.github/workflows/deploy.yml` runs `build.py` and deploys `pages/`.
+
+All asset references use relative paths, so the site works both at a domain root and under a repository subdirectory (`https://<user>.github.io/<repo>/`). The app is fully static — no database, no server-side rendering, no backend required to run it once built.
 
 ---
 
@@ -246,8 +202,9 @@ poetry run python -m pytest -v
 
 | Test file | What it covers |
 |-----------|---------------|
-| `tests/test_api.py` | FastAPI routes — `GET /`, `GET /embed`, static assets, CORS headers, origin injection, 404 behaviour |
-| `tests/test_extractor.py` | `FileExtractor` — word index, CSV wordlist, category/statistics outputs, edge cases |
+| `tests/test_api.py` | FastAPI routes — `/`, `/embed`, `/playground`, static assets (including `gestures/gestures.json`, `i18n/*.json`, `sigml/*.sigml`), CORS, origin injection, 404 behaviour |
+| `tests/test_gestures.py` | Gesture ids are unique, every referenced `.sigml` file exists, no two gestures share one animation file |
+| `tests/test_i18n.py` | All four language files exist and have **identical** keys; no empty translations; every gesture and category has translations in all four languages |
 
 ---
 
@@ -260,14 +217,19 @@ poetry run python -m pytest -v
 ├── .github/workflows/
 │   └── deploy.yml                # CI/CD — deploys to GitHub Pages on push to master
 ├── templates/
-│   ├── embed.html                # Iframe-only embed page (/embed); __ALLOWED_ORIGIN__ injected at build/serve time
+│   ├── embed.html                # Iframe-only embed page (/embed)
 │   └── playground.html           # SiGML playground page (/playground)
 ├── web-simulator/
-│   ├── index.html                # Full standalone UI (/)
-│   ├── avatar.js                 # Shared avatar logic — loads config + dictionary, exposes Avatar.sign/signSiGML/stop
-│   ├── avatar.json               # Runtime config (signDuration, dictionary path) — edit to tune behaviour
-│   ├── sigml -> ../data/sigml         # Symlink — canonical SiGML files live in data/
-│   ├── dictionary.json -> ../data/dictionary.json  # Symlink — canonical dictionary lives in data/
+│   ├── index.html                # Mafia Signs — full gesture dictionary UI (/)
+│   ├── avatar.js                 # Avatar.playURL/signSiGML/stop — thin wrapper over CWASA
+│   ├── avatar.json               # Runtime timing config
+│   ├── js/
+│   │   ├── i18n.js               # Language detection/persistence, data-i18n binding
+│   │   ├── gestures.js           # Loads gestures.json, exposes lookup helpers
+│   │   └── app.js                # Search, categories, selection, hash routing, playback controls
+│   ├── sigml -> ../data/sigml              # Symlink — canonical SiGML files live in data/
+│   ├── gestures -> ../data/gestures        # Symlink — canonical gesture definitions live in data/
+│   ├── i18n -> ../data/i18n                # Symlink — canonical translations live in data/
 │   ├── cwa/
 │   │   ├── allcsa.js             # CWASA avatar rendering library (bundled, do not edit)
 │   │   └── cwacfg.json           # Avatar list and renderer config
@@ -277,34 +239,26 @@ poetry run python -m pytest -v
 │   ├── h2s.xsl                   # HamNoSys → SiGML XSLT transform
 │   └── favicon.svg
 ├── data/
-│   ├── sigml/                    # SiGML animation files — one file per word (<word>.sigml)
-│   └── dictionary.json           # Categorised word list — single source of truth for all words
+│   ├── gestures/gestures.json    # Gesture definitions — single source of truth (id/category/animation)
+│   ├── i18n/{en,uk,ru,de}.json   # Translations — identical keys in every file
+│   └── sigml/                    # SiGML animation files, one per animated gesture id
 ├── tests/
 │   ├── test_api.py
-│   ├── test_extractor.py
-│   └── extract_data_word_list.py
-├── sigml-reference.md            # SiGML format reference — verified tokens, ordering rules, working number examples
+│   ├── test_gestures.py
+│   └── test_i18n.py
+├── sigml-reference.md            # SiGML format reference — verified tokens, ordering rules, working examples
+├── GESTURES.md                   # Gesture meanings and known limitations
 ├── docs/                         # Reference documents for HamNoSys and the eSIGN editor
-│   ├── HamNoSysFonts.pdf         # Complete HamNoSys token list with Unicode code points
-│   ├── HNS-intro-guide.pdf       # HamNoSys introductory guide (handshapes, orientation, movement)
-│   ├── HNS4.1.pdf                # HamNoSys version 4.1 specification
-│   ├── eSIGN-D23rev2.pdf         # eSIGN editor user documentation (adding signs, exporting SiGML)
-│   ├── eSIGNApproach.pdf         # eSIGN project approach document
-│   └── An intro to eSignEditor and HNS.pdf  # Quick intro to the eSIGN editor and HamNoSys
-├── CREDITS
-├── .env                          # Local env vars (not committed)
-├── .env.example                  # Env var template
+├── CREDITS                       # Attribution to the original ArSL avatar project
+├── .env.example
 ├── Makefile
-├── poetry.lock
 ├── pyproject.toml
-└── LICENSE                       # CC BY-NC-4.0
+└── LICENSE
 ```
 
 ### How the build works
 
-`build.py` copies `web-simulator/` into `pages/` (resolving all symlinks into real files), then injects `__ALLOWED_ORIGIN__` into the embed template and copies the playground template. The `pages/` directory is .gitignored — it is generated output only.
-
-The FastAPI dev server (`app.py`) serves `web-simulator/` directly with `follow_symlink=True`, so symlinks are transparent and no build step is needed during development.
+`build.py` copies `web-simulator/` into `pages/` (resolving all symlinks into real files), then injects `__ALLOWED_ORIGIN__` into the embed template and copies the playground template. `pages/` is .gitignored — generated output only. The FastAPI dev server (`app.py`) serves `web-simulator/` directly with `follow_symlink=True`, so no build step is needed during development.
 
 ---
 
@@ -313,10 +267,16 @@ The FastAPI dev server (`app.py`) serves `web-simulator/` directly with `follow_
 - [HamNoSys Notation System](https://www.sign-lang.uni-hamburg.de/hamnosys.html)
 - [SiGML (Signing Gesture Markup Language)](https://vh.cmp.uea.ac.uk/index.php/SiGML)
 - [CWASA Signing Avatars](https://vh.cmp.uea.ac.uk/index.php/CWA_Signing_Avatars)
-- [DictaSign Project](https://www.sign-lang.uni-hamburg.de/dicta-sign/portal/concepts/concepts_fre.html)
 - [`sigml-reference.md`](sigml-reference.md) — verified SiGML token reference with working examples
+- [`GESTURES.md`](GESTURES.md) — gesture list and known limitations
 - [`docs/`](docs/) — local copies of the HamNoSys and eSIGN editor reference documents
+
+## Attribution & Licensing
+
+This project builds on [linuxscout/algerianSignLanguage-avatar](https://github.com/linuxscout/algerianSignLanguage-avatar) — see [`CREDITS`](CREDITS) for the original authors and contributors, who remain unchanged by this rebrand. The bundled CWASA engine (`web-simulator/cwa/`) is third-party and unmodified; see its own licensing terms upstream.
+
+**Note:** `pyproject.toml` and this README declare `CC-BY-NC-4.0`, but the committed [`LICENSE`](LICENSE) file currently contains the full GPLv3 text. This inconsistency predates this rebrand and hasn't been resolved here — confirm the intended license with the repository owner before reusing this code.
 
 ## License
 
-[CC BY-NC-4.0](LICENSE)
+[CC BY-NC-4.0](LICENSE) (see note above)

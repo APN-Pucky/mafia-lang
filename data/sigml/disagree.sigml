@@ -1,0 +1,13 @@
+<sigml>
+  <hns_sign gloss="disagree">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamflathand/>
+      <hamextfingeru/>
+      <hampalmd/>
+      <hamneutralspace/>
+      <hamzigzag/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "citizen",
+    "category": "roles",
+    "animation": "sigml/citizen.sigml"
+  },
+  {
+    "id": "mafia",
+    "category": "roles",
+    "animation": "sigml/mafia.sigml"
+  },
+  {
+    "id": "don",
+    "category": "roles",
+    "animation": "sigml/don.sigml"
+  },
+  {
+    "id": "sheriff",
+    "category": "roles",
+    "animation": "sigml/sheriff.sigml"
+  },
+  {
+    "id": "sheriff_self",
+    "category": "roles",
+    "animation": "sigml/sheriff_self.sigml"
+  },
+  {
+    "id": "me",
+    "category": "roles",
+    "animation": "sigml/me.sigml"
+  },
+  {
+    "id": "you",
+    "category": "roles",
+    "animation": "sigml/you.sigml"
+  },
+  {
+    "id": "player_number_1",
+    "category": "roles",
+    "animation": "sigml/player_number_1.sigml"
+  },
+  {
+    "id": "player_number_2",
+    "category": "roles",
+    "animation": "sigml/player_number_2.sigml"
+  },
+  {
+    "id": "player_number_3",
+    "category": "roles",
+    "animation": "sigml/player_number_3.sigml"
+  },
+  {
+    "id": "player_number_4",
+    "category": "roles",
+    "animation": "sigml/player_number_4.sigml"
+  },
+  {
+    "id": "player_number_5",
+    "category": "roles",
+    "animation": "sigml/player_number_5.sigml"
+  },
+  {
+    "id": "player_number_6",
+    "category": "roles",
+    "animation": "sigml/player_number_6.sigml"
+  },
+  {
+    "id": "player_number_7",
+    "category": "roles",
+    "animation": "sigml/player_number_7.sigml"
+  },
+  {
+    "id": "player_number_8",
+    "category": "roles",
+    "animation": "sigml/player_number_8.sigml"
+  },
+  {
+    "id": "player_number_9",
+    "category": "roles",
+    "animation": "sigml/player_number_9.sigml"
+  },
+  {
+    "id": "player_number_10",
+    "category": "roles",
+    "animation": "sigml/player_number_10.sigml"
+  },
+  {
+    "id": "check_player",
+    "category": "information",
+    "animation": "sigml/check_player.sigml"
+  },
+  {
+    "id": "who_is_sheriff",
+    "category": "information",
+    "animation": "sigml/who_is_sheriff.sigml"
+  },
+  {
+    "id": "reveal_role",
+    "category": "information",
+    "animation": null
+  },
+  {
+    "id": "checked_red",
+    "category": "information",
+    "animation": null
+  },
+  {
+    "id": "checked_black",
+    "category": "information",
+    "animation": null
+  },
+  {
+    "id": "unknown",
+    "category": "information",
+    "animation": null
+  },
+  {
+    "id": "vote",
+    "category": "actions",
+    "animation": "sigml/vote.sigml"
+  },
+  {
+    "id": "vote_for_player",
+    "category": "actions",
+    "animation": null
+  },
+  {
+    "id": "shoot",
+    "category": "actions",
+    "animation": "sigml/shoot.sigml"
+  },
+  {
+    "id": "next_player",
+    "category": "actions",
+    "animation": null
+  },
+  {
+    "id": "wait",
+    "category": "actions",
+    "animation": null
+  },
+  {
+    "id": "stop",
+    "category": "actions",
+    "animation": null
+  },
+  {
+    "id": "agree",
+    "category": "strategy",
+    "animation": "sigml/agree.sigml"
+  },
+  {
+    "id": "disagree",
+    "category": "strategy",
+    "animation": "sigml/disagree.sigml"
+  },
+  {
+    "id": "together",
+    "category": "strategy",
+    "animation": "sigml/together.sigml"
+  },
+  {
+    "id": "listen",
+    "category": "strategy",
+    "animation": null
+  },
+  {
+    "id": "trust",
+    "category": "strategy",
+    "animation": null
+  },
+  {
+    "id": "distrust",
+    "category": "strategy",
+    "animation": null
+  },
+  {
+    "id": "defend",
+    "category": "strategy",
+    "animation": null
+  },
+  {
+    "id": "accuse",
+    "category": "strategy",
+    "animation": null
+  },
+  {
+    "id": "conflict",
+    "category": "strategy",
+    "animation": null
+  }
+]

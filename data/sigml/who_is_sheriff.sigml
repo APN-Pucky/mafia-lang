@@ -1,0 +1,24 @@
+<sigml>
+  <hns_sign gloss="sheriff">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamcee12/>
+      <hamextfingeru/>
+      <hampalmu/>
+      <hamneutralspace/>
+      <hamnomotion/>
+    </hamnosys_manual>
+  </hns_sign>
+  <hns_sign gloss="question">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger2/>
+      <hamfingerhookmod/>
+      <hamextfingero/>
+      <hampalmd/>
+      <hamneutralspace/>
+      <hamcircleu/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

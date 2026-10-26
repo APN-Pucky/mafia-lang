@@ -1,0 +1,13 @@
+<sigml>
+  <hns_sign gloss="player_number_1">
+    <hamnosys_nonmanual></hamnosys_nonmanual>
+    <hamnosys_manual>
+      <hamfinger2/>
+      <hamextfingeru/>
+      <hampalmu/>
+      <hamshouldertop/>
+      <hammoveo/>
+      <hamsmallmod/>
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>

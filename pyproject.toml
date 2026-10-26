@@ -2,7 +2,7 @@
 package-mode = false
 name = "sign-language-avatar"
 version = "0.1.0"
-description = "Automated Arabic Algerian Sign Language (ALSL) translation system using 3D avatar technology"
+description = "Mafia Signs — a multilingual 3D-avatar gesture dictionary for competitive Sports Mafia, forked from the Automated Arabic Algerian Sign Language (ALSL) translation system"
 authors = [
     "Amine Mami",
     "Mohamed Elfares Slimani",

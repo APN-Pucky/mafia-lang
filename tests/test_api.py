@@ -16,6 +16,13 @@ def test_root_serves_index_html():
     assert "CWASAAvatar" in resp.text
 
 
+def test_root_is_not_rtl_arabic():
+    resp = client.get("/")
+    assert 'dir="rtl"' not in resp.text
+    assert 'lang="ar"' not in resp.text
+    assert "Mafia Signs" in resp.text
+
+
 def test_embed_route_ok():
     resp = client.get("/embed")
     assert resp.status_code == 200
@@ -67,20 +74,27 @@ def test_static_cwasa_js():
     assert resp.status_code == 200
 
 
-def test_static_categories_json():
-    resp = client.get("/categories_files.json")
+def test_static_gestures_json():
+    resp = client.get("/gestures/gestures.json")
     assert resp.status_code == 200
     data = resp.json()
     assert isinstance(data, list)
     assert len(data) > 0
+    assert all("id" in g and "category" in g for g in data)
 
 
-def test_static_words_json():
-    resp = client.get("/words.json")
+def test_static_i18n_files():
+    for lang in ("en", "uk", "ru", "de"):
+        resp = client.get(f"/i18n/{lang}.json")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert isinstance(data, dict)
+        assert "app.title" in data
+
+
+def test_static_sigml_file():
+    resp = client.get("/sigml/citizen.sigml")
     assert resp.status_code == 200
-    data = resp.json()
-    assert isinstance(data, list)
-    assert len(data) > 0
 
 
 def test_cors_header_present():
