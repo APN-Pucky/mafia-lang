@@ -1,23 +1,12 @@
 <sigml>
   <hns_sign gloss="listen">
-    <hamnosys_nonmanual/>
+    <hamnosys_nonmanual></hamnosys_nonmanual>
     <hamnosys_manual>
-      <hamsymmlr/>
-      <hamfingerstraightmod/>
-      <hamlargemod/>
-      <hamfinger23spread/>
-      <hamthumbacrossmod/>
-      <hamextfingero/>
+      <hamfinger2/>
+      <hamextfingerl/>
       <hampalmd/>
-      <hamshoulders/>
-      <hamparbegin/>
-        <hammovei/>
-        <hamreplace/>
-        <hamextfingeril/>
-        <hampalmr/>
-        <hambetween/>
-        <hampalmd/>
-      <hamparend/>
+      <hamear/>
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>
