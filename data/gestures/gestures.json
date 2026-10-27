@@ -333,5 +333,10 @@
     "id": "foul",
     "category": "actions",
     "animation": "sigml/foul.sigml"
+  },
+  {
+    "id": "reveal",
+    "category": "information",
+    "animation": "sigml/reveal.sigml"
   }
 ]

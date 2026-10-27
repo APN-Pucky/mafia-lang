@@ -148,5 +148,7 @@
   "gestures.secret_sheriff.name": "Secret Sheriff",
   "gestures.secret_sheriff.description": "Just a wink — no hand gesture at all. A discreet, hands-free way for the Sheriff to signal themselves.",
   "gestures.foul.name": "Foul",
-  "gestures.foul.description": "Index finger traces a checkmark-like motion (`hamseqbegin`/`hamseqend`: a short stroke down-right, then a longer stroke up-right) — marks a rule violation."
+  "gestures.foul.description": "Index finger traces a checkmark-like motion (`hamseqbegin`/`hamseqend`: a short stroke down-right, then a longer stroke up-right) — marks a rule violation.",
+  "gestures.reveal.name": "Reveal",
+  "gestures.reveal.description": "Both flat hands stacked on top of each other like a closed book, then the top hand rotates open while the bottom hand stays put — reveals your role."
 }

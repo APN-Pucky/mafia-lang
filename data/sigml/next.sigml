@@ -1,15 +1,71 @@
 <sigml>
-  <hns_sign gloss="next">
-    <hamnosys_nonmanual></hamnosys_nonmanual>
+  <hns_sign gloss="reveal">
+    <hamnosys_nonmanual/>
     <hamnosys_manual>
-      <hamfinger2/>
-      <hamextfingero/>
-      <hampalmd/>
-      <hamneutralspace/>
-      <hamsymmpar/>
-      <hamlrat/>
-      <hamstircw/>
-      <hamrepeatcontinueseveral/>
+
+      <!-- Both hands flat, stacked on top of each other like a closed
+           book: top hand palm-down (the cover), bottom hand palm-up
+           (the base/pages) -->
+      <hamparbegin/>
+        <hamflathand/>
+        <hamextfingerl/>
+        <hampalmd/>
+
+        <hamplus/>
+
+        <hamflathand/>
+        <hamextfingerr/>
+        <hampalmu/>
+      <hamparend/>
+
+
+      <hamparbegin/>
+
+	<hamfingertip />
+	<hamthumb />
+	<hamplus />
+
+    	<hamfingerbase />
+	<hamthumb />
+      <hamparend/>
+      <hamtouch/>
+
+
+      <hammoved/><hamsmallmod/>
+
+      <hammovei/><hamsmallmod/>
+
+      <hammovei/><hamsmallmod/>
+
+      <hammoveu/><hamsmallmod/>
+
+      <hammoveu/><hamsmallmod/>
+
+      <hammoveo/><hamsmallmod/>
+
+      <hammoveo/><hamsmallmod/>
+
+      <hammoved/><hamsmallmod/>
+
+     
+      <hammoved/><hamsmallmod/>
+
+      <hammovei/><hamsmallmod/>
+
+      <hammovei/><hamsmallmod/>
+
+      <hammoveu/><hamsmallmod/>
+
+      <hammoveu/><hamsmallmod/>
+
+      <hammoveo/><hamsmallmod/>
+
+      <hammoveo/><hamsmallmod/>
+
+      <hammoved/><hamsmallmod/>
+
+
+
     </hamnosys_manual>
   </hns_sign>
 </sigml>

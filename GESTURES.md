@@ -16,6 +16,8 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `question_mark` | information | Question Mark (What/Who/Why?) | Hooked index finger or a question mark traced in the air — a universal question, often combined with pointing at a player |
 | `who_is_sheriff` | information | Who is Sheriff? | The Sheriff gesture followed by the question gesture |
 | `not_sheriff` | information | Not Sheriff | The Sheriff gesture followed by a side-to-side "no" wave |
+| `reveal` | information | Reveal | Both flat hands stacked like a closed book, then the top hand rotates open while the bottom stays put |
+| `secret_sheriff` | roles | Secret Sheriff | Just a wink (`hnm_eyelids tag="CL"`) — no hand gesture at all |
 | `check_player_1`…`check_player_10` | information | Check Player 1–10 | Shows that player number, then the hooked-finger question gesture |
 | `nominate` | actions | Nominate | Shows a player number, then a fist with thumb up is placed onto the other, flat horizontal hand |
 | `kill_player_1`…`kill_player_10` | actions | Kill Player 1–10 | Shows that player number, then the same fingers curl into a repeated hook/claw motion |
@@ -23,12 +25,8 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `shot` | actions | Shot | Index+middle fingers extended like a gun barrel at the head, then curl into a repeated trigger motion |
 | `split` | actions | Split vote | One flat, vertical "blade" hand saws down repeatedly through the other, half-open hand |
 | `next` | actions | Next | Both hands (mirrored, alternating), index fingers pointing out, rotating around each other continuously |
-| `wait` | actions | Wait | Both hands mirrored, circling motion at the shoulders |
 | `stop` | actions | Stop | Both hands mirrored, flat palms down, small outward nudge then halt |
 | `break` | actions | Break | Both palms pressed together, flat, in neutral space |
-| `agree` | strategy | Agree | Nod, or thumbs up |
-| `disagree` | strategy | Disagree | Head shake, or crossed arms |
-| `together` | strategy | Together | Two players show the same handshape side by side |
 | `if` | strategy | If | Thumb and pinky extended, other fingers curled into the fist ("shaka"-style handshape) |
 | `miss` | strategy | Miss | Open hand closes into a pinch with the index finger bent |
 | `listen` | strategy | Listen | Both hands mirrored, fingers spread, drawn toward the shoulders/ears |
@@ -38,11 +36,11 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `minus` | strategy | Minus | One hand, index finger extended horizontally, a flat "−" |
 | `speak` | strategy | Speak | An open hand repeatedly closes into a pinch in front of the body (not at the head, unlike `think`) |
 | `open_up` | strategy | Open Up | Both flat hands, palms facing each other together in the middle, swing apart like opening a book |
+| `foul` | actions | Foul | Index finger traces a checkmark-like motion (`hamseqbegin`/`hamseqend`) |
 
 ## Known limitations
 
 - **Player numbers 6–10** are a one-hand-at-a-time sequence rather than a true simultaneous two-hand pose — the CWASA two-hand primitives available here (`hamsymmlr`/`hamsymmpar`) only support identical/mirrored poses on both hands, not two different handshapes at once.
-- **`together`** uses `hamsymmpar` (both hands mirrored/parallel) as one of the few genuine two-hand gestures in this set — worth a visual sanity check since it's less exercised elsewhere in this codebase.
-- Several animations (`miss`, `listen`, `talk`, `wait`, `stop`, `roof`) are adapted from other national sign languages' SiGML corpora (British Sign Language, Polish Sign Language, Vietnamese Sign Language) rather than from a Sports Mafia-specific source — they're a reasonable visual starting point for the general concept (e.g. "talking", "listening"), not a claim that this is the actual Mafia table gesture for that meaning.
+- Several animations (`miss`, `listen`, `talk`, `stop`, `roof`) are adapted from other national sign languages' SiGML corpora (British Sign Language, Polish Sign Language, Vietnamese Sign Language) rather than from a Sports Mafia-specific source — they're a reasonable visual starting point for the general concept (e.g. "talking", "listening"), not a claim that this is the actual Mafia table gesture for that meaning.
 - Animations are being refined by hand against the live avatar (via `/playground` or the dev server) — see `data/sigml/*.sigml` to inspect or adjust any of them, and `sigml-reference.md` for the full HamNoSys/SiGML tag reference.
 - **License file inconsistency** (pre-existing, not introduced by this change): `LICENSE` contains the full GPLv3 text, while `pyproject.toml` and the README footer declare `CC-BY-NC-4.0`. Left as-is for the repository owner to resolve.

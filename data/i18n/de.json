@@ -148,5 +148,7 @@
   "gestures.secret_sheriff.name": "Geheimer Sheriff",
   "gestures.secret_sheriff.description": "Nur ein Augenzwinkern — ganz ohne Handgeste. Eine unauffällige Möglichkeit für den Sheriff, sich zu erkennen zu geben.",
   "gestures.foul.name": "Foul",
-  "gestures.foul.description": "Der Zeigefinger zeichnet eine häkchenähnliche Bewegung (`hamseqbegin`/`hamseqend`: ein kurzer Strich nach rechts unten, dann ein längerer Strich nach rechts oben) — markiert einen Regelverstoß."
+  "gestures.foul.description": "Der Zeigefinger zeichnet eine häkchenähnliche Bewegung (`hamseqbegin`/`hamseqend`: ein kurzer Strich nach rechts unten, dann ein längerer Strich nach rechts oben) — markiert einen Regelverstoß.",
+  "gestures.reveal.name": "Aufdecken",
+  "gestures.reveal.description": "Beide flachen Hände liegen übereinander wie ein geschlossenes Buch, dann dreht sich die obere Hand auf, während die untere Hand bleibt, wo sie ist — deckt deine Rolle auf."
 }

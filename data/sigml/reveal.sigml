@@ -1,0 +1,99 @@
+<sigml>
+  <hns_sign gloss="reveal">
+    <hamnosys_nonmanual/>
+    <hamnosys_manual>
+
+      <!-- Both hands flat, stacked on top of each other like a closed
+           book: top hand palm-down (the cover), bottom hand palm-up
+           (the base/pages) -->
+      <hamparbegin/>
+        <hamflathand/>
+        <hamextfingero/>
+        <hampalmd/>
+
+        <hamplus/>
+
+        <hamflathand/>
+        <hamextfingero/>
+        <hampalmu/>
+      <hamparend/>
+
+
+      <hamparbegin/>
+
+	<hamfingerbase />
+	<hampinky />
+	<hamplus />
+
+    	<hamfingerbase />
+	<hampinky />
+      <hamparend/>
+      <hamtouch/>
+
+    <!-- Only the top hand rotates open, like a book cover swinging
+           up and to the side; the bottom hand stays put -->
+      <hamreplace/>
+      <hamflathand/>
+      <hamextfingero/>
+      <hampalmdl/>
+<hamparbegin/>
+
+	<hamfingerbase />
+	<hampinky />
+	<hamplus />
+
+    	<hamfingerbase />
+	<hampinky />
+      <hamparend/>
+      <hamtouch/>
+
+      <!-- Only the top hand rotates open, like a book cover swinging
+           up and to the side; the bottom hand stays put -->
+      <hamreplace/>
+      <hamflathand/>
+      <hamextfingero/>
+      <hampalml/>
+<hamparbegin/>
+
+	<hamfingerbase />
+	<hampinky />
+	<hamplus />
+
+    	<hamfingerbase />
+	<hampinky />
+      <hamparend/>
+      <hamtouch/>
+
+      <hamreplace/>
+      <hamflathand/>
+      <hamextfingero/>
+      <hampalmur/>
+<hamparbegin/>
+
+	<hamfingerbase />
+	<hampinky />
+	<hamplus />
+
+    	<hamfingerbase />
+	<hampinky />
+      <hamparend/>
+      <hamtouch/>
+
+      <hamreplace/>
+      <hamflathand/>
+      <hamextfingero/>
+      <hampalmu/>
+<hamparbegin/>
+
+	<hamfingerbase />
+	<hampinky />
+	<hamplus />
+
+    	<hamfingerbase />
+	<hampinky />
+      <hamparend/>
+      <hamtouch/>
+
+    </hamnosys_manual>
+  </hns_sign>
+</sigml>
