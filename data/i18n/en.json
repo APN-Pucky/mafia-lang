@@ -141,14 +141,12 @@
   "gestures.check_player_10.description": "Shows player number 10, then the hooked-finger question gesture — asks about / checks that player.",
   "gestures.kickout_player_10.name": "Kick Out Player 10",
   "gestures.kickout_player_10.description": "Shows player number 10, then a fist with thumb up is placed onto the other, flat horizontal hand — votes to eliminate that player.",
-  "gestures.open_up.name": "Open Up",
-  "gestures.open_up.description": "Both hands, flat, palms facing each other together in the middle, swing apart like opening a book.",
   "gestures.nominate.name": "Nominate",
   "gestures.nominate.description": "First shows a player number (like “Player 1”), then a closed fist with thumb up is placed onto the other, flat horizontal hand — proposes that player for voting.",
   "gestures.secret_sheriff.name": "Secret Sheriff",
   "gestures.secret_sheriff.description": "Just a wink — no hand gesture at all. A discreet, hands-free way for the Sheriff to signal themselves.",
   "gestures.foul.name": "Foul",
   "gestures.foul.description": "Index finger traces a checkmark-like motion (`hamseqbegin`/`hamseqend`: a short stroke down-right, then a longer stroke up-right) — marks a rule violation.",
-  "gestures.reveal.name": "Reveal",
+  "gestures.reveal.name": "Reveal (Open Up / Play As)",
   "gestures.reveal.description": "Both flat hands stacked on top of each other like a closed book, then the top hand rotates open while the bottom hand stays put — reveals your role."
 }

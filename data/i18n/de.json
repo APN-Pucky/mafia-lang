@@ -141,14 +141,12 @@
   "gestures.check_player_10.description": "Zeigt Spielernummer 10, dann die Frage-Geste mit gehaktem Finger — fragt nach diesem Spieler / überprüft ihn.",
   "gestures.kickout_player_10.name": "Spieler 10 rauswerfen",
   "gestures.kickout_player_10.description": "Zeigt Spielernummer 10, dann wird eine Faust mit erhobenem Daumen auf die andere, flache waagerechte Hand gelegt — Stimme für den Ausschluss dieses Spielers.",
-  "gestures.open_up.name": "Öffnen",
-  "gestures.open_up.description": "Beide Hände, flach, Handflächen einander zugewandt in der Mitte zusammen, schwingen auseinander wie ein aufgeschlagenes Buch.",
   "gestures.nominate.name": "Vorschlagen",
   "gestures.nominate.description": "Zeigt zuerst eine Spielernummer (wie „Spieler 1“), dann wird eine geschlossene Faust mit erhobenem Daumen auf die andere, flache waagerechte Hand gelegt — schlägt diesen Spieler zur Abstimmung vor.",
   "gestures.secret_sheriff.name": "Geheimer Sheriff",
   "gestures.secret_sheriff.description": "Nur ein Augenzwinkern — ganz ohne Handgeste. Eine unauffällige Möglichkeit für den Sheriff, sich zu erkennen zu geben.",
   "gestures.foul.name": "Foul",
   "gestures.foul.description": "Der Zeigefinger zeichnet eine häkchenähnliche Bewegung (`hamseqbegin`/`hamseqend`: ein kurzer Strich nach rechts unten, dann ein längerer Strich nach rechts oben) — markiert einen Regelverstoß.",
-  "gestures.reveal.name": "Aufdecken",
+  "gestures.reveal.name": "Aufdecken (Öffnen / Spielen als)",
   "gestures.reveal.description": "Beide flachen Hände liegen übereinander wie ein geschlossenes Buch, dann dreht sich die obere Hand auf, während die untere Hand bleibt, wo sie ist — deckt deine Rolle auf."
 }

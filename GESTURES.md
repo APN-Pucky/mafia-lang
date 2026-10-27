@@ -35,7 +35,6 @@ This lists every entry in [`data/gestures/gestures.json`](data/gestures/gestures
 | `plus` | strategy | Plus | Both hands, index fingers extended, crossing (one vertical, one horizontal) to form a "+" |
 | `minus` | strategy | Minus | One hand, index finger extended horizontally, a flat "−" |
 | `speak` | strategy | Speak | An open hand repeatedly closes into a pinch in front of the body (not at the head, unlike `think`) |
-| `open_up` | strategy | Open Up | Both flat hands, palms facing each other together in the middle, swing apart like opening a book |
 | `foul` | actions | Foul | Index finger traces a checkmark-like motion (`hamseqbegin`/`hamseqend`) |
 
 ## Known limitations
